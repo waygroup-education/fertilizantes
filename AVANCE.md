@@ -1,4 +1,4 @@
-# Avance · Buenas Prácticas Agrícolas (BPA) y aplicación segura de fertilizantes y plaguicidas · 2026-11-02
+# Avance · Buenas Prácticas Agrícolas (BPA) y aplicación segura de fertilizantes y plaguicidas · 2026-11-03
 
 Esta entrega es un avance: lo que sigue está detenido y llega en una entrega siguiente.
 
