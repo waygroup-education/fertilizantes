@@ -1,0 +1,14 @@
+{
+  "name": "fertilizantes",
+  "version": "1.0.0",
+  "description": "Curso OVA: Buenas Prácticas Agrícolas (BPA) y aplicación segura de fertilizantes y plaguicidas",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "node build.js && node scripts/servir.js",
+    "start": "node scripts/servir.js",
+    "build": "node build.js",
+    "test": "node build.js && node scripts/verificar.js",
+    "zip": "node build.js && node scripts/zip.js"
+  }
+}

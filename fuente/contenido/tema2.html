@@ -1,0 +1,328 @@
+<style>
+  /* DISEÑO (fertilizantes, 2026-11-02): tablas en móvil, relleno 12 px; las de celda larga con ancho
+     mínimo 600 px (se desplazan más, pero se leen). Arreglo local; el del motor va como REQ KIT */
+  @media (max-width: 600px){
+    .ova-tabla th, .ova-tabla td { padding: 12px; }
+    .wg-tabla-ancha table { min-width: 600px; }
+  }
+  /* DISEÑO (fertilizantes, revisión del diagramador 2026-11-02, arquitecto 2026-11-02): el subtítulo de
+     cuerpo (párrafo en negrilla del Word) va un escalón bajo el h2 y la negrilla no sube el peso a 900 */
+  .wg-sub { font-size: 1.25rem; font-weight: 700; }
+  .wg-sub strong { font-weight: inherit; }
+  /* DISEÑO (fertilizantes, 2026-11-02): muestra de color con borde legible (la blanca medía 1,29:1) */
+  .wg-muestra { display:inline-block; width:14px; height:14px; border-radius:50%; border:1px solid color-mix(in srgb, var(--text-head) 45%, transparent); vertical-align:middle; margin-right:8px; }
+</style>
+
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Manejo del cultivo y uso responsable de insumos</h1>
+      </header>
+
+      <!-- Situación de partida · el texto es el cuadro (tabla 1×1) del Word bajo «Situación de partida:» -->
+      <div data-reveal style="margin-bottom:40px; padding:32px; background:linear-gradient(135deg, color-mix(in srgb, var(--c-acento) 10%, var(--bg-surface)) 0%, var(--bg-surface) 60%); border:1px solid color-mix(in srgb, var(--c-acento) 30%, var(--border-c)); border-radius:var(--r-lg); position:relative; overflow:hidden;">
+        <h3 style="font-family:var(--font-mono); font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color:var(--c-acento); margin:0 0 16px; display:flex; align-items:center; gap:10px;"><iconify-icon icon="mdi:comment-question-outline" style="font-size:1.1rem;"></iconify-icon> Situación de partida</h3>
+        <p style="margin:0; font-size:1.02rem; line-height:1.6;">Para reducir costos, un productor decidió sembrar semilla “de costal”, guardada de su cosecha anterior, en lugar de adquirir semilla certificada. Semanas después, la germinación resultó irregular y muchas plantas mostraron características inconsistentes entre sí.</p>
+        <p style="margin:14px 0 0; font-size:1.02rem; line-height:1.6;"><strong>Antes de avanzar, reflexiona sobre lo siguiente</strong>: ¿qué información clave y garantías perdió el productor al tomar esta decisión? La selección del material de siembra es el primer paso técnico de cualquier sistema productivo. De esta elección depende, en gran medida, el éxito de las etapas posteriores, incluyendo la fertilización y el control de plagas que estudiarás en este tema.</p>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.1 · tema2-1 ════ -->
+      <section class="ova-seccion" id="tema2-1" data-reveal>
+        <h2 class="ova-seccion__titulo">Elección de semillas y prácticas de siembra</h2>
+        <p class="ova-seccion__lead">La selección estratégica de semillas es el pilar fundamental para el éxito agrícola y la sostenibilidad del sistema productivo. Elegir el material idóneo optimiza el rendimiento, eleva la calidad de la cosecha y minimiza riesgos críticos como plagas, enfermedades o bajas tasas de germinación. En el mercado actual, la oferta se divide en dos categorías claves: las semillas no certificadas (o “de costal”), que carecen de controles técnicos y de trazabilidad, y las semillas certificadas, las cuales superan rigurosos procesos legales, sanitarios y de control de calidad que garantizan su pureza y un óptimo potencial genético (y, en el caso de los híbridos, su vigor híbrido).</p>
+      </section>
+
+      <!-- El DI: "Comparativo" · tabla 1×2 (las cabeceras no van en negrilla en el Word) -->
+      <div class="ova-vs" data-reveal>
+        <div class="ova-vs__card">
+          <h3>Semillas certificadas</h3>
+          <p>Producidas bajo los programas oficiales de control del ICA, estas semillas garantizan una alta calidad y homogeneidad genética. Cuentan con un porcentaje de germinación igual o superior al mínimo que fija la norma del ICA para cada especie, indicado en el rótulo y están respaldadas por la identificación del productor, número de lote y certificado de producción. Su única desventaja es un costo de comercialización más elevado.</p>
+        </div>
+        <div class="ova-vs__divider">VS</div>
+        <div class="ova-vs__card ova-vs__card--alt">
+          <h3>Semillas no certificadas</h3>
+          <p>Obtenidas comúnmente de cosechas anteriores, estas semillas representan una alternativa de menor costo económico. Sin embargo, suelen presentar mezclas de variedades que alteran la pureza genética del cultivo, carecen de certeza en su porcentaje de germinación y no disponen de un proceso de certificación oficial.</p>
+        </div>
+      </div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Especificaciones de etiquetado</strong></h3>
+      <p data-reveal>Conforme a la Resolución ICA 15141 de 2024, que establece las condiciones y requisitos para la producción, importación, exportación y almacenamiento de semillas en Colombia y derogó la Resolución 3168 de 2015, la etiqueta indica la categoría de la semilla mediante un color y debe incluir los datos de identificación y calidad del lote: productor o importador, especie, cultivar, categoría, número de lote, peso neto y parámetros de calidad, como el porcentaje de germinación. A escala internacional, el sistema de semillas de la OCDE (2025) también emplea una codificación por colores.</p>
+
+      <!-- Tabla 1 del Word: rótulo en negrilla y título literal. DISEÑO: muestra de color junto al nombre (arquitecto 2026-11-02); no añade texto -->
+      <p data-reveal style="margin-top:32px; margin-bottom:12px;"><strong>Tabla 1</strong><br>Color de etiqueta para la categoría de la semilla</p>
+      <div class="ova-tabla" data-reveal style="margin-top:0; overflow-x:auto;"><table><thead><tr><th>Categoría de la semilla</th><th>Color de la etiqueta</th></tr></thead><tbody>
+        <tr><td>Semilla súper-élite</td><td style="white-space:nowrap;"><span aria-hidden="true" class="wg-muestra" style="background:#1B5E20;"></span>Verde oscuro</td></tr>
+        <tr><td>Semilla élite</td><td><span aria-hidden="true" class="wg-muestra" style="background:#8BC34A;"></span>Verde claro</td></tr>
+        <tr><td>Semilla básica</td><td><span aria-hidden="true" class="wg-muestra" style="background:#FFFFFF;"></span>Blanca</td></tr>
+        <tr><td>Semilla registrada</td><td><span aria-hidden="true" class="wg-muestra" style="background:#F48FB1;"></span>Rosada</td></tr>
+        <tr><td>Semilla certificada (C1 y C2)</td><td><span aria-hidden="true" class="wg-muestra" style="background:#1E88E5;"></span>Azul</td></tr>
+        <tr><td>Semilla seleccionada</td><td><span aria-hidden="true" class="wg-muestra" style="background:#FDD835;"></span>Amarilla</td></tr>
+      </tbody></table></div>
+
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:information-outline"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Importante</span><p style="margin:8px 0 0;">Verifica siempre en la etiqueta la categoría de la semilla, el número de lote, el porcentaje de germinación y los datos del productor o importador registrado ante el ICA.</p></div>
+      </div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Beneficios técnicos y económicos del uso de semilla certificada</strong></h3>
+      <p data-reveal>El uso de semilla certificada es una inversión estratégica que transforma el potencial del cultivo, garantizando seguridad jurídica, eficiencia operativa y una rentabilidad superior en el negocio agrícola.</p>
+
+      <h4 style="margin:32px 0 16px;" data-reveal><strong>Beneficios técnicos (calidad y rendimiento):</strong></h4>
+      <!-- DESVIACIÓN DEL DI: el Word dice "Carrusel" (tres tarjetas); va como grilla de tres por §3 Carrusel («NO si son 3 o menos, mejor grid»), arquitecto 2026-11-02 -->
+      <div class="ova-grid-3" data-reveal>
+        <div style="padding:28px; background:var(--bg-surface); border:1px solid var(--border-c); border-radius:var(--r-lg);">
+          <div style="width:44px; height:44px; border-radius:12px; background:var(--grad-brand); display:grid; place-items:center; color:#fff; margin-bottom:16px;"><iconify-icon icon="mdi:sprout" style="font-size:1.3rem;"></iconify-icon></div>
+          <h4 style="margin:0 0 10px;"><strong>Máximo potencial de germinación</strong></h4>
+          <p style="margin:0; font-size:.95rem;">Cumplen el porcentaje mínimo de germinación que exige el ICA para la especie, indicado en el rótulo. Esto asegura un establecimiento uniforme de la población en campo y minimiza la necesidad de resiembras.</p>
+        </div>
+        <div style="padding:28px; background:var(--bg-surface); border:1px solid var(--border-c); border-radius:var(--r-lg);">
+          <div style="width:44px; height:44px; border-radius:12px; background:var(--grad-brand); display:grid; place-items:center; color:#fff; margin-bottom:16px;"><iconify-icon icon="mdi:dna" style="font-size:1.3rem;"></iconify-icon></div>
+          <h4 style="margin:0 0 10px;"><strong>Pureza genética y varietal</strong></h4>
+          <p style="margin:0; font-size:.95rem;">Libre de mezclas con otras variedades o especies. Asegura la homogeneidad del cultivo, facilitando el manejo agronómico y estandarizando la calidad de la cosecha.</p>
+        </div>
+        <div style="padding:28px; background:var(--bg-surface); border:1px solid var(--border-c); border-radius:var(--r-lg);">
+          <div style="width:44px; height:44px; border-radius:12px; background:var(--grad-brand); display:grid; place-items:center; color:#fff; margin-bottom:16px;"><iconify-icon icon="mdi:shield-bug-outline" style="font-size:1.3rem;"></iconify-icon></div>
+          <h4 style="margin:0 0 10px;"><strong>Sanidad vegetal superior</strong></h4>
+          <p style="margin:0; font-size:.95rem;">Semillas sometidas a estrictos controles fitosanitarios. Reducen drásticamente la introducción de plagas, enfermedades y malezas cuarentenarias en el lote.</p>
+        </div>
+      </div>
+
+      <h4 style="margin:32px 0 16px;" data-reveal><strong>Beneficios económicos (rentabilidad y respaldo):</strong></h4>
+      <!-- El DI: "Acordeón". D3 (frase sin punto final en el tercer ítem): literal, no bloquea -->
+      <div class="ova-acordeon" data-reveal style="margin-top:0;">
+        <div class="ova-acordeon__item is-open">
+          <button class="ova-acordeon__head"><span><span class="num">01</span> <strong>Trazabilidad, legalidad y confianza</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Cada lote cuenta con un riguroso soporte técnico y legal por parte de la empresa comercializadora. Esto mitiga el riesgo financiero ante eventualidades y asegura el cumplimiento de las normativas vigentes.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">02</span> <strong>Alta productividad y competitividad</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Optimizan el rendimiento por hectárea. El incremento en el volumen y calidad de la cosecha compensa con creces la inversión inicial en el insumo.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">03</span> <strong>Eficiencia de costos en insumos</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Al desarrollar plantas más vigorosas y tolerantes, se reduce el gasto en fertilizantes y plaguicidas, optimizando la estructura de costos de producción y mejores condiciones fitosanitarias para el cultivo</div></div>
+        </div>
+      </div>
+
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:head-question-outline"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Dato curioso</span><p style="margin:8px 0 0;">De acuerdo con Acosemillas (2024), en Colombia existen 15 especies agrícolas clasificadas bajo la categoría de semilla certificada, las cuales comprenden el ajonjolí, algodón, arroz, arveja, avena, cebada, fríjol, maíz, maní, papa, sorgo, soya, trigo, yuca y los cítricos.</p></div>
+      </div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Criterios técnicos para seleccionar las semillas</strong></h3>
+      <!-- El DI: "Acordeón" -->
+      <div class="ova-acordeon" data-reveal style="margin-top:0;">
+        <div class="ova-acordeon__item is-open">
+          <button class="ova-acordeon__head"><span><span class="num">01</span> <strong>Costo-beneficio</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Evaluar el retorno de la inversión mediante un análisis integral que contraste el costo de la semilla con su potencial de rendimiento y su posicionamiento o prestigio dentro del mercado.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">02</span> <strong>Requerimientos técnicos</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Garantizar que la semilla certificada cumpla estrictamente con los estándares técnicos oficiales, como un óptimo porcentaje de germinación, y cuente con el aval de la autoridad competente reguladora, como el Instituto Colombiano Agropecuario (ICA).</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">03</span> <strong>Tolerancia climática</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Seleccionar materiales biológicos con alta tolerancia a la variabilidad climática extrema, específicamente ante los efectos de fenómenos macroclimáticos como El Niño y La Niña.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">04</span> <strong>Adaptación regional</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Asegurar la compatibilidad y el óptimo desempeño de la variedad frente a las condiciones climáticas específicas de la zona destinada a la siembra.</div></div>
+        </div>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.2 · tema2-2 ════ -->
+      <section class="ova-seccion" id="tema2-2" data-reveal>
+        <h2 class="ova-seccion__titulo">Análisis de suelos como base del plan de fertilización</h2>
+        <p class="ova-seccion__lead">Optimizar la nutrición del suelo exige determinar con precisión la cantidad de fertilizante requerida. De este modo, se evitan sobrecostos económicos, se mitigan los riesgos ambientales por toxicidad y se previenen pérdidas de rendimiento asociadas a deficiencias nutricionales. La mejor estrategia para lograrlo es diseñar un plan de fertilización respaldado por un análisis de suelos integral, el cual revela el estado físico, químico y biológico real del terreno.</p>
+      </section>
+      <p data-reveal>Para iniciar este proceso, el productor o asistente técnico debe dominar los siguientes tipos de muestreo:</p>
+
+      <!-- Figura 7 del diseñador (Imagen 7) -->
+      <figure class="ova-figura ova-figura--plana" data-reveal style="margin-top:16px;">
+        <img src="assets/img/curso/figura-07-tipos-de-muestreo.webp" alt="Tres tipos de muestreo. Muestreo simple: consiste en tomar una muestra puntual del terreno; sirve solo como observación puntual y no representa adecuadamente la variabilidad del lote; no recomendado para análisis de fertilidad. Muestreo compuesto: se realiza recolectando varias submuestras de suelo, distribuidas en el terreno de forma aleatoria o en zigzag (15 a 20 submuestras por lote); posteriormente, mediante el método de cuarteo, se homogenizan y se obtiene una muestra representativa de aproximadamente un kilogramo. Muestreo sistemático: consiste en recolectar submuestras siguiendo un patrón regular; a partir de un punto inicial, se marcan los demás con distancias uniformes, distribuyendo el terreno como si fuese una rejilla rectangular, lo que permite obtener una visión más ordenada y representativa de los nutrientes del suelo." />
+      </figure>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Procedimiento para el muestreo de suelos</strong></h3>
+      <!-- El DI: "Stepper" · títulos literales del Word (traen el ordinal). Sin ova-step__tag -->
+      <div class="ova-stepper" data-reveal style="margin-top:0;">
+        <div class="ova-step">
+          <div class="ova-step__num"><span>01</span></div>
+          <div class="ova-step__card"><h3><strong>Primer paso - Demarcación del terreno</strong></h3><p>Identificar y dividir el área de estudio, según los cambios de relieve o topografía, variaciones en el color del suelo y los diferentes tipos de cobertura vegetal. Esto garantiza que las muestras sean representativas.</p></div>
+        </div>
+        <div class="ova-step">
+          <div class="ova-step__num"><span>02</span></div>
+          <div class="ova-step__card"><h3><strong>Segundo paso - Selección de la metodología y preparación</strong></h3><p>Definir el tipo de muestreo: para un análisis de fertilidad se recomienda la muestra compuesta, es decir, la mezcla de varias submuestras tomadas en un mismo lote. Posteriormente, limpiar la superficie del punto seleccionado eliminando la hojarasca y los residuos vegetales superficiales.</p></div>
+        </div>
+        <div class="ova-step">
+          <div class="ova-step__num"><span>03</span></div>
+          <div class="ova-step__card"><h3><strong>Tercer paso - Toma de submuestras</strong></h3><p>Recorrer cada lote homogéneo en zigzag y tomar entre 15 y 20 submuestras a una profundidad de 0 a 20 cm (o a la que indique el laboratorio para el cultivo). La calicata es una técnica aparte, útil para observar el perfil del suelo, pero no se usa en el muestreo de rutina para análisis de fertilidad.</p></div>
+        </div>
+        <div class="ova-step">
+          <div class="ova-step__num"><span>04</span></div>
+          <div class="ova-step__card"><h3><strong>Cuarto paso - Extracción y homogenización</strong></h3><p>Retirar las submuestras descartando los bordes, para evitar contaminación. Eliminar impurezas externas como piedras, raíces o restos de raíces, y mezclar uniformemente la tierra recolectada, hasta lograr una masa homogénea.</p></div>
+        </div>
+        <div class="ova-step">
+          <div class="ova-step__num"><span>05</span></div>
+          <div class="ova-step__card"><h3><strong>Quinto paso - Aplicación de la técnica de cuarteo</strong></h3><p>Dividir la muestra homogenizada utilizando el método de cuarteo sucesivo. Repetir el proceso hasta obtener una muestra final óptima, de aproximadamente un kilogramo.</p></div>
+        </div>
+        <div class="ova-step">
+          <div class="ova-step__num"><span>06</span></div>
+          <div class="ova-step__card"><h3><strong>Sexto paso - Envasado, rotulado y envío</strong></h3><p>Depositar la muestra en una bolsa plástica limpia y hermética. Colocar el rótulo con la información de identificación, fecha, lote, profundidad, responsable, y enviarla inmediatamente al laboratorio, para su respectivo análisis fisicoquímico.</p></div>
+        </div>
+      </div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Ventajas del análisis de suelos</strong></h3>
+      <p data-reveal>El análisis de suelos es una herramienta diagnóstica fundamental para evaluar las propiedades físicas, químicas y biológicas del terreno. Su ejecución proporciona los datos científicos necesarios para diseñar planes de fertilización eficientes, rentables y sostenibles, optimizando el uso de recursos y minimizando el impacto ambiental (FAO, 2013).</p>
+
+      <!-- El DI: "Carrusel" (cuatro tarjetas) -->
+      <div class="ova-carrusel ova-carrusel--tarjetas" data-reveal style="margin-top:16px;">
+        <div class="ova-carrusel__track-wrap"><div class="ova-carrusel__track">
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:chart-line"></iconify-icon><h4><strong>Optimización del rendimiento agrícola</strong></h4><p>Mediante el cálculo preciso de los nutrientes que el suelo requiere para cada sistema de cultivo, se maximiza la productividad tanto en la etapa de siembra como en la de cosecha.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:cash-multiple"></iconify-icon><h4><strong>Control de costos y eficiencia financiera</strong></h4><p>Determinar la dosis exacta de fertilizante evita el desperdicio de insumos. Esto se traduce en un ahorro económico inmediato y directo para el agricultor, reduciendo gastos innecesarios sin sacrificar la producción.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:shovel"></iconify-icon><h4><strong>Regeneración y acondicionamiento del suelo</strong></h4><p>El análisis continuo de las variables del suelo permite aplicar enmiendas y mejoradores de forma estratégica. Como resultado, se potencia la estructura del terreno, optimizando la retención de agua y la asimilación de nutrientes.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:water-check-outline"></iconify-icon><h4><strong>Sostenibilidad y protección ambiental</strong></h4><p>El uso eficiente de insumos minimiza el riesgo de lixiviación y escorrentía de nutrientes. De este modo, se mitiga el impacto ecológico negativo, protegiendo los cuerpos de agua, la salud del suelo y la biodiversidad del entorno.</p></div>
+        </div></div>
+        <div class="ova-carrusel__nav"><div class="ova-carrusel__dots"></div><div class="ova-carrusel__arrows"><button class="ova-carrusel__arrow" data-ova-carrusel-prev><iconify-icon icon="mdi:arrow-left"></iconify-icon></button><button class="ova-carrusel__arrow" data-ova-carrusel-next><iconify-icon icon="mdi:arrow-right"></iconify-icon></button></div></div>
+      </div>
+
+      <!-- El punto tras «una vez al año» va solo él en negrilla en el Word: literal -->
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:lightbulb-on"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Ten en cuenta</span><p style="margin:8px 0 0;">Como regla general, se recomienda realizar un muestreo de suelo al menos una vez al año<strong>.</strong> No obstante, esta frecuencia debe ajustarse en función de los ciclos productivos, la rotación de cultivos o la incidencia de plagas y enfermedades.</p></div>
+      </div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Tipos de análisis de suelos</strong></h3>
+      <p data-reveal>Según el propósito y las necesidades de producción, los análisis de suelo pueden evaluar variables físicas, químicas o biológicas. Cada uno de estos enfoques posee características y alcances particulares (FAO, 2013):</p>
+
+      <!-- El DI: "Acordeón" -->
+      <div class="ova-acordeon" data-reveal style="margin-top:16px;">
+        <div class="ova-acordeon__item is-open">
+          <button class="ova-acordeon__head"><span><span class="num">01</span> <strong>Análisis físico</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Evalúa propiedades estructurales claves como la textura, densidad y profundidad efectiva del suelo. Esta información constituye la línea base para diseñar prácticas eficientes de labranza, manejo mecánico y conservación del recurso.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">02</span> <strong>Análisis químico</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Determina variables críticas como el pH, la capacidad de intercambio catiónico (CIC) y la concentración de macro y micronutrientes. Estos indicadores son indispensables para formular un plan de fertilización preciso y de alto rendimiento.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">03</span> <strong>Análisis biológico</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Mide la actividad microbiana y el contenido de materia orgánica, componentes esenciales que dinamizan procesos vitales para el cultivo, tales como la mineralización de nutrientes y la fijación biológica de nitrógeno.</div></div>
+        </div>
+      </div>
+
+      <p data-reveal style="margin-top:32px;">A continuación, se expone un modelo de los resultados obtenidos en un análisis fisicoquímico de suelos, herramienta diagnóstica fundamental para que el agrónomo o especialista diseñe el programa de fertilización:</p>
+
+      <!-- Tabla 2 del Word -->
+      <p data-reveal style="margin-top:16px; margin-bottom:12px;"><strong>Tabla 2</strong><br>Ejemplo resultados análisis fisicoquímico del suelo</p>
+      <div class="ova-tabla" data-reveal style="margin-top:0; overflow-x:auto;"><table><thead><tr><th>Variable</th><th>Unidad</th><th>Resultado</th><th>Valor de referencia</th></tr></thead><tbody>
+        <tr><td>Arena</td><td>%</td><td>2,11</td><td>No aplica</td></tr>
+        <tr><td>Arcilla</td><td>%</td><td>64,69</td><td>No aplica</td></tr>
+        <tr><td>Limo</td><td>%</td><td>33,20</td><td>No aplica</td></tr>
+        <tr><td>pH</td><td>Unidades de pH</td><td>5,2</td><td>6,0 – 7,5</td></tr>
+        <tr><td>Materia orgánica</td><td>%</td><td>2,9</td><td>3,0 – 5,0</td></tr>
+        <tr><td>Nitrógeno orgánico</td><td>%</td><td>0,1</td><td>0,25 – 0,50</td></tr>
+        <tr><td>Potasio</td><td>meq/100 g K</td><td>0,6</td><td>0,20 – 0,30</td></tr>
+      </tbody></table></div>
+
+      <!-- D2 («5.2» y «2.9» con punto decimal): literal, no bloquea -->
+      <p data-reveal style="margin-top:24px;">En este ejemplo, un pH de 5.2 y un contenido de materia orgánica del 2.9 % revelan un suelo fuertemente ácido y deficitario en componentes orgánicos. Este diagnóstico indica que el profesional debe priorizar el encalado y la incorporación de enmiendas orgánicas antes de determinar el tipo y la dosis del fertilizante.</p>
+
+      <!-- ════ Sección {{NUM}}.3 · tema2-3 ════ -->
+      <section class="ova-seccion" id="tema2-3" data-reveal>
+        <h2 class="ova-seccion__titulo">Variables agroclimáticas y acidez del suelo</h2>
+        <p class="ova-seccion__lead">Los sistemas agrícolas dependen de variables ambientales que determinan directamente el desarrollo, la productividad y la sostenibilidad de los cultivos. En Colombia, este monitoreo se realiza mediante la red nacional de estaciones meteorológicas del IDEAM, así como a través de dispositivos tecnológicos a pequeña escala disponibles en el mercado.</p>
+      </section>
+
+      <!-- Figura 8 del diseñador (Imagen 8) -->
+      <figure class="ova-figura ova-figura--plana" data-reveal>
+        <img src="assets/img/curso/figura-08-variables-climaticas.webp" alt="Variables climáticas, claves para un campo productivo y sostenible. 01, precipitación: comportamiento de los niveles de lluvia, lo que determina la disponibilidad de agua y la planificación del riego; en temporada de lluvias intensas pueden presentarse eventos erosivos y afectaciones por lixiviación de nutrientes; en temporada seca prolongada aumenta el riesgo de estrés hídrico. 02, temperatura: la temperatura influye en la evapotranspiración y en la velocidad de desarrollo del cultivo; en temporadas secas prolongadas puede causar estrés hídrico. 03, humedad relativa: afecta la transpiración de las plantas y la aparición de enfermedades, e interviene en el crecimiento y la floración. 04, radiación solar: condiciona la fotosíntesis y el desarrollo fisiológico del cultivo. 05, velocidad y dirección del viento: inciden en la polinización, la erosión del suelo y la dispersión de plaguicidas; favorecen el secado de granos y frutos, aunque los vientos fuertes pueden ocasionar efectos erosivos. Conocer el clima también cultiva mejores resultados: un mejor conocimiento del clima hace crecer el futuro." />
+      </figure>
+
+      <p data-reveal style="margin-top:24px;">Recuerda lo visto en 1.4.2 sobre el pH y la corrección de la acidez. La Tabla 3 te permite interpretar el valor de pH que reporta un análisis de suelos:</p>
+
+      <!-- Tabla 3 del Word · 9 filas × 3 columnas: a 390 px se desplaza lateralmente (arquitecto 2026-11-02); apilarla por fichas sería una regla del motor (REQ KIT) -->
+      <p data-reveal style="margin-top:16px; margin-bottom:12px;"><strong>Tabla 3</strong><br>Rangos de pH</p>
+      <div class="ova-tabla wg-tabla-ancha" data-reveal style="margin-top:0; overflow-x:auto;"><table><thead><tr><th>Rango de pH</th><th>Grado de acidez o alcalinidad</th><th>Característica del suelo</th></tr></thead><tbody>
+        <tr><td>&lt; 4,5</td><td>Extremadamente ácido</td><td>Muy limitado para cultivos; requiere correcciones intensivas, como el encalado fuerte.</td></tr>
+        <tr><td>4,5 – 5,0</td><td>Muy fuertemente ácido</td><td>Limita el desarrollo de ciertos sistemas agrícolas; solo apto para cultivos muy tolerantes.</td></tr>
+        <tr><td>5,1 – 5,5</td><td>Fuertemente ácido</td><td>Restrictivo; requiere enmiendas, como la aplicación de cal agrícola.</td></tr>
+        <tr><td>5,6 – 6,0</td><td>Moderadamente ácido</td><td>Aceptable; idóneo para la mayoría de cultivos, con ajustes mínimos.</td></tr>
+        <tr><td>6,1 – 6,5</td><td>Ligeramente ácido</td><td>Óptimo para la mayoría de cultivos.</td></tr>
+        <tr><td>6,6 – 7,3</td><td>Neutro</td><td>Excelente; adecuada disponibilidad de nutrientes.</td></tr>
+        <tr><td>7,4 – 7,8</td><td>Ligeramente alcalino</td><td>Apto; puede presentarse carencia de micronutrientes.</td></tr>
+        <tr><td>7,9 – 8,4</td><td>Moderadamente alcalino</td><td>Limitado para los cultivos; requiere adición de materia orgánica o manejos especiales.</td></tr>
+        <tr><td>≥ 8,5</td><td>Fuertemente alcalino</td><td>Muy limitado para el desarrollo agrícola; no se recomienda para sistemas agrícolas.</td></tr>
+      </tbody></table></div>
+
+      <!-- ════ Sección {{NUM}}.4 · tema2-4 ════ -->
+      <section class="ova-seccion" id="tema2-4" data-reveal>
+        <h2 class="ova-seccion__titulo">Elementos claves para el plan de fertilización</h2>
+        <p class="ova-seccion__lead">El profesional responsable de diseñar el plan de fertilización debe fundamentar sus recomendaciones técnicas en los resultados del análisis de suelo. Esto garantiza que las sugerencias se ajusten con precisión a las necesidades reales del sistema agrícola, integrando los siguientes principios para la gestión responsable de fertilizantes (Grasso y Díaz, 2020). Estos principios se conocen como los 4 Requisitos (4R): fuente, dosis, momento y lugar correctos:</p>
+      </section>
+
+      <!-- El DI: "Carrusel" (cuatro tarjetas) -->
+      <div class="ova-carrusel ova-carrusel--tarjetas" data-reveal>
+        <div class="ova-carrusel__track-wrap"><div class="ova-carrusel__track">
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:package-variant-closed"></iconify-icon><h4><strong>Selección de la fuente óptima</strong></h4><p>Determinar el tipo específico de fertilizante y la combinación exacta de nutrientes que el cultivo exige, garantizando una asimilación eficiente, según las características del suelo.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:scale-balance"></iconify-icon><h4><strong>Dosificación precisa</strong></h4><p>Calcular con exactitud la cantidad de fertilizante necesaria por hectárea o planta, basándose en análisis de suelo previos para evitar carencias nutricionales o pérdidas por exceso.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:calendar-clock"></iconify-icon><h4><strong>Momento oportuno</strong></h4><p>Aplicar los nutrientes en las etapas fenológicas críticas del desarrollo vegetal, cuando el cultivo más los demanda.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:map-marker-outline"></iconify-icon><h4><strong>Ubicación estratégica</strong></h4><p>Incorporar o distribuir el fertilizante en la zona radicular activa, minimizando la volatilización o el lavado y facilitando el acceso directo de las raíces al alimento.</p></div>
+        </div></div>
+        <div class="ova-carrusel__nav"><div class="ova-carrusel__dots"></div><div class="ova-carrusel__arrows"><button class="ova-carrusel__arrow" data-ova-carrusel-prev><iconify-icon icon="mdi:arrow-left"></iconify-icon></button><button class="ova-carrusel__arrow" data-ova-carrusel-next><iconify-icon icon="mdi:arrow-right"></iconify-icon></button></div></div>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.5 · tema2-5 ════ -->
+      <section class="ova-seccion" id="tema2-5" data-reveal>
+        <h2 class="ova-seccion__titulo">Uso racional de agroquímicos</h2>
+        <p class="ova-seccion__lead">El uso de fertilizantes y plaguicidas es una práctica agrícola fundamental para optimizar las condiciones del suelo, controlar plagas y prevenir enfermedades en los cultivos. No obstante, para garantizar la seguridad y mitigar los riesgos sobre la salud humana, animal y el medio ambiente, es indispensable que su aplicación se realice bajo estrictos criterios de responsabilidad (Ministerio de Ambiente y Desarrollo Sostenible, 2018).</p>
+      </section>
+      <p data-reveal>Antes de profundizar en la clasificación técnica y las normativas vigentes, te invitamos a ver el siguiente video. En él se presentan recomendaciones prácticas y esenciales para el manejo seguro de agroquímicos en el campo, abarcando aspectos claves como el transporte, el almacenamiento, el lavado de equipos, el uso correcto del Equipo de Protección Personal (EPP), la disposición final de envases y las medidas de higiene personal.</p>
+
+      <!-- HUECO · Video 3 (el DI: «(Vincular video 3)»): detenido por ERRORES-ORIGEN-2026-11-02 D1 (Bloquea = Sí):
+           el Word trae el enlace del video 2 (youtu.be/a8_7cYoaKv8, «Técnicas preparación de terreno»).
+           Cuando llegue el enlace correcto: ova-video con iframe de YouTube, como el video 2 del tema 1 -->
+      <div data-ova-hueco="video 3 (2.5, manejo seguro de agroquímicos): detenido por ERRORES-ORIGEN-2026-11-02 D1, el Word trae el enlace del video 2" data-reveal style="margin-top:16px;"></div>
+
+      <!-- Tabla 4 del Word -->
+      <p data-reveal style="margin-top:32px; margin-bottom:12px;"><strong>Tabla 4</strong><br>Tipos de plaguicidas</p>
+      <div class="ova-tabla wg-tabla-ancha" data-reveal style="margin-top:0; overflow-x:auto;"><table><thead><tr><th>Tipo</th><th>Característica</th><th>Ejemplo</th></tr></thead><tbody>
+        <tr><td>Inorgánicos</td><td>A base de minerales como cobre o azufre.</td><td>Oxicloruro de cobre, azufre.</td></tr>
+        <tr><td>Botánicos</td><td>Extraídos de partes de vegetales.</td><td>Extracto de neem.</td></tr>
+        <tr><td>Biológicos</td><td>Microorganismos usados para el control biológico de plagas.</td><td>Trichoderma harzianum, Beauveria bassiana, Metarhizium anisopliae.</td></tr>
+        <tr><td>Organosintéticos y sintéticos</td><td>Producidos por laboratorios a nivel industrial; comprenden un amplio grupo de sustancias.</td><td>Organofosforados, carbamatos, piretroides.</td></tr>
+      </tbody></table></div>
+
+      <!-- DISEÑO: «Importante» en variante de peligro porque es una prohibición (arquitecto 2026-11-02); el rótulo es el del Word -->
+      <div class="ova-callout ova-callout--danger" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:alert-octagon-outline"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Importante</span><p style="margin:8px 0 0;">Los organoclorados están prohibidos en Colombia.</p></div>
+      </div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Categoría de toxicidad</strong></h3>
+      <p data-reveal>Los plaguicidas con registro comercial deben especificar su categoría de toxicidad en la etiqueta, según su nivel de peligrosidad. Esta clasificación se realiza bajo los lineamientos del Sistema Globalmente Armonizado de Clasificación y Etiquetado de Productos Químicos (SGA). En Colombia, la etiqueta de los plaguicidas sigue la Decisión Andina 804 de 2015 y el Manual Técnico Andino (Resolución 2075 de 2019), y el Decreto 1496 de 2018 adopta el SGA para los productos químicos.</p>
+
+      <!-- Tabla 5 del Word. DISEÑO: muestra de color junto al nombre, como en la Tabla 1 (arquitecto 2026-11-02) -->
+      <p data-reveal style="margin-top:32px; margin-bottom:12px;"><strong>Tabla 5</strong><br>Categoría de toxicidad</p>
+      <div class="ova-tabla" data-reveal style="margin-top:0; overflow-x:auto;"><table><thead><tr><th>Categoría de toxicidad aguda (SGA)</th><th>Palabra de advertencia</th><th>Color de banda toxicológica</th></tr></thead><tbody>
+        <tr><td>Categoría 1</td><td>Peligro</td><td><span aria-hidden="true" class="wg-muestra" style="background:#D32F2F;"></span>Rojo</td></tr>
+        <tr><td>Categoría 2</td><td>Peligro</td><td><span aria-hidden="true" class="wg-muestra" style="background:#D32F2F;"></span>Rojo</td></tr>
+        <tr><td>Categoría 3</td><td>Peligro</td><td><span aria-hidden="true" class="wg-muestra" style="background:#FDD835;"></span>Amarillo</td></tr>
+        <tr><td>Categoría 4</td><td>Atención</td><td><span aria-hidden="true" class="wg-muestra" style="background:#1E88E5;"></span>Azul</td></tr>
+        <tr><td>Categoría 5</td><td>Atención</td><td><span aria-hidden="true" class="wg-muestra" style="background:#43A047;"></span>Verde</td></tr>
+      </tbody></table></div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Medidas de seguridad y EPP</strong></h3>
+
+      <!-- Figura 9 del diseñador (Imagen 9) -->
+      <figure class="ova-figura ova-figura--plana" data-reveal>
+        <img src="assets/img/curso/figura-09-medidas-de-seguridad.webp" alt="Cuatro medidas de seguridad. 01, leer y verificar las etiquetas: identificando la categoría de toxicidad, las indicaciones de uso, las dosis, los periodos de carencia y las medidas de seguridad de cada producto. 02, consultar y mantener disponibles las hojas de datos de seguridad (HDS): con información técnica sobre riesgos, medidas de control, manejo, almacenamiento y procedimientos de emergencia. 03, conservar los plaguicidas en sus envases originales: evitando trasvases que puedan generar confusión o accidentes y manteniendo las etiquetas legibles y en buen estado. 04, almacenar los plaguicidas separados de los fertilizantes y otros insumos: en lugares ventilados, secos, seguros y debidamente señalizados, lejos de fuentes de calor, alimentos, agua y del alcance de personas no autorizadas." />
+      </figure>
+
+      <p data-reveal style="margin-top:24px;">Consulta en 4.3 la selección, el uso y el retiro del EPP. Antes de cosechar, respeta el período de carencia indicado en la etiqueta (días entre la última aplicación y la cosecha) y, antes de volver al lote tratado, el período de reingreso.</p>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Triple lavado y disposición de envases</strong></h3>
+      <p data-reveal>Una vez consumido el producto, los envases deben someterse a la técnica del triple lavado, que minimiza los residuos químicos adheridos, previene impactos ambientales y reduce riesgos para la salud pública. Triple lavado: llena el envase vacío hasta una cuarta parte con agua limpia, tápalo, agítalo 30 segundos y vierte el enjuague en el tanque de la bomba. Repite tres veces, perfora el envase sin dañar la etiqueta y guárdalo en un lugar seguro, señalizado y apartado de insumos, alimentos o fuentes de agua, hasta entregarlo al programa posconsumo (Resolución 1675 de 2013).</p>
+
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:book-open-variant"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Para profundizar</span><p style="margin:8px 0 0;">En Colombia, los programas de posconsumo de plaguicidas están regulados por la Resolución 1675 de 2013, del Ministerio de Ambiente y Desarrollo Sostenible, que define las reglas, acciones y mecanismos para garantizar la devolución, recolección y acopio de envases vacíos de plaguicidas, tratados como residuos peligrosos.</p></div>
+      </div>

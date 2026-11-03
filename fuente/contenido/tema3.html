@@ -1,0 +1,185 @@
+<style>
+  /* DISEÑO (fertilizantes, 2026-11-02): tablas en móvil, relleno 12 px; las de celda larga con ancho
+     mínimo 600 px (se desplazan más, pero se leen). Arreglo local; el del motor va como REQ KIT */
+  @media (max-width: 600px){
+    .ova-tabla th, .ova-tabla td { padding: 12px; }
+    .wg-tabla-ancha table { min-width: 600px; }
+  }
+  /* DISEÑO (fertilizantes, revisión del diagramador 2026-11-02, arquitecto 2026-11-02): el subtítulo de
+     cuerpo (párrafo en negrilla del Word) va un escalón bajo el h2 y la negrilla no sube el peso a 900 */
+  .wg-sub { font-size: 1.25rem; font-weight: 700; }
+  .wg-sub strong { font-weight: inherit; }
+</style>
+
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Cosecha, poscosecha y trazabilidad</h1>
+      </header>
+
+      <!-- Situación de partida · el texto es el cuadro (tabla 1×1) del Word bajo «Situación de partida:» -->
+      <div data-reveal style="margin-bottom:40px; padding:32px; background:linear-gradient(135deg, color-mix(in srgb, var(--c-acento) 10%, var(--bg-surface)) 0%, var(--bg-surface) 60%); border:1px solid color-mix(in srgb, var(--c-acento) 30%, var(--border-c)); border-radius:var(--r-lg); position:relative; overflow:hidden;">
+        <h3 style="font-family:var(--font-mono); font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color:var(--c-acento); margin:0 0 16px; display:flex; align-items:center; gap:10px;"><iconify-icon icon="mdi:comment-question-outline" style="font-size:1.1rem;"></iconify-icon> Situación de partida</h3>
+        <p style="margin:0; font-size:1.02rem; line-height:1.6;">Un productor, motivado por una oportunidad de precio, decidió adelantar la cosecha de su cultivo antes de que alcanzara la madurez óptima. Como consecuencia, al llegar al mercado, un porcentaje significativo del lote fue rechazado debido a la falta de uniformidad en su tamaño, color y sabor.</p>
+        <p style="margin:14px 0 0; font-size:1.02rem; line-height:1.6;"><strong>Reflexionemos un momento:</strong> ¿qué variables críticas se omitieron al tomar esta decisión? Una recolección carente de estrategia puede comprometer meses o incluso años de trabajo. En esta unidad, estudiarás los principios claves de la planificación de la cosecha y la gestión poscosecha para garantizar la rentabilidad y calidad del producto.</p>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.1 · tema3-1 ════ -->
+      <!-- DISEÑO: lead solo cuando la entrada es corta (3.2); 3.1, 3.3 y 3.4 van en cuerpo, dentro de su sección para quedar a la misma distancia del título (arquitecto 2026-11-02) -->
+      <section class="ova-seccion" id="tema3-1" data-reveal>
+        <h2 class="ova-seccion__titulo">Buenas prácticas en la recolección</h2>
+        <p>La cosecha de productos agrícolas debe asegurar los más altos estándares de calidad e inocuidad. Para ello, es indispensable implementar buenas prácticas que mitiguen cualquier riesgo de contaminación durante las fases de manipulación y transporte posterior. Al respecto, Gutiérrez et al. (2021) señalan que el éxito de esta etapa depende de una evaluación integral de factores críticos como la edad y el manejo del cultivo, las variedades empleadas, la densidad de siembra y la topografía del terreno. Asimismo, se debe considerar la uniformidad de la madurez (tanto por árbol como por lotes), la disponibilidad y experiencia de la mano de obra, los registros históricos y las condiciones climáticas del momento.</p>
+      </section>
+      <p data-reveal>En sintonía con lo anterior, López Camelo (2003) sugiere prestar especial atención a los siguientes aspectos operativos, abarcando desde la planificación inicial hasta las etapas finales de almacenamiento o procesamiento:</p>
+
+      <!-- El DI: "Acordeón" -->
+      <div class="ova-acordeon" data-reveal style="margin-top:16px;">
+        <div class="ova-acordeon__item is-open">
+          <button class="ova-acordeon__head"><span><span class="num">01</span> <strong>Planificación de la cosecha</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Basándose en el ciclo del sistema productivo y los calendarios de recolección, resulta indispensable programar con suficiente anticipación el aprovisionamiento de insumos, herramientas y empaques, así como la asignación de personal, logística de transporte y adecuación de áreas de almacenamiento temporal. Una planificación rigurosa optimiza los tiempos de recolección, mitiga riesgos operativos y salvaguarda la calidad e inocuidad del producto final.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">02</span> <strong>Determinación del estado de madurez</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">El momento idóneo para la cosecha está estrictamente ligado al tipo de cultivo y a su ciclo de desarrollo, debido a que cada especie posee ventanas de manejo agrícola específicas para su recolección. El índice de madurez se determina mediante evaluaciones sensoriales y físicas, como la relación entre tamaño, color y firmeza, o a través de análisis técnicos que miden la concentración de nutrientes, azúcares y compuestos activos.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">03</span> <strong>Monitoreo de condiciones climáticas</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Las fluctuaciones de temperatura, humedad relativa y radiación solar inciden directamente en la fisiología del cultivo, acelerando o retrasando el proceso de maduración. Ante la frecuencia de fenómenos climáticos extremos como heladas, sequías o choques térmicos, es fundamental mantener un monitoreo meteorológico constante para anticipar cambios en los calendarios de cosecha y proteger el rendimiento del cultivo.</div></div>
+        </div>
+      </div>
+
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:head-question-outline"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Sabías que</span><p style="margin:8px 0 0;">Según proyecciones del Instituto de Hidrología, Meteorología y Estudios Ambientales (IDEAM, 2024), se estima que para el año 2050 las temperaturas en Colombia experimenten un incremento de entre 1,5 °C y 2 °C. Este calentamiento intensificará la frecuencia y severidad de eventos climáticos extremos, tales como tormentas, sequías prolongadas e inundaciones, lo que comprometerá directamente la productividad agrícola y la seguridad alimentaria del territorio nacional.</p></div>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.2 · tema3-2 ════ -->
+      <section class="ova-seccion" id="tema3-2" data-reveal>
+        <h2 class="ova-seccion__titulo">Clasificación, empaque, embalaje y transporte del producto</h2>
+        <p class="ova-seccion__lead">La poscosecha comprende todas las fases que transcurren desde la recolección de los productos hasta su llegada al consumidor final. Su correcta ejecución es determinante para mantener la calidad, la inocuidad y la vida útil de los alimentos.</p>
+      </section>
+
+      <!-- Subtítulos en negrilla del Word, al mismo nivel los tres -->
+      <h3 class="wg-sub" style="margin:0 0 16px;" data-reveal><strong>Limpieza y clasificación</strong></h3>
+      <p data-reveal>Una vez recolectados los frutos, deben trasladarse a un espacio adecuado y alejado de fuentes de contaminación cruzada, donde se retiran impurezas y se realizan procesos de lavado y desinfección, mediante inmersión total o aspersión (Mejía et al., 2023).</p>
+
+      <!-- Figura 10 del diseñador (Imagen 10) -->
+      <figure class="ova-figura ova-figura--plana" data-reveal style="margin-top:16px;">
+        <img src="assets/img/curso/figura-10-factores-de-calidad.webp" alt="La clasificación consiste en organizar los productos de acuerdo con características como forma, peso, color, aroma y sabor; los productos deben estar libres de humedad externa, sin olores ni sabores extraños y exentos de síntomas de deshidratación. Factores de calidad: tamaño mínimo, forma, consistencia, color, daños serios, indicios de descomposición y daños leves (magulladuras, manchas, heridas superficiales)." />
+      </figure>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Empaque y embalaje</strong></h3>
+      <p data-reveal>Los empaques empleados en la cosecha y el traslado interno deben estar limpios y reservados exclusivamente para el producto agrícola, previniendo así cualquier riesgo de contaminación cruzada. Por su parte, el embalaje tiene la función de proteger la carga durante el almacenamiento y la distribución, por lo que se deben seleccionar materiales idóneos, según la naturaleza del producto y la longitud de la ruta comercial.</p>
+
+      <!-- Tabla 6 del Word (sin negrilla en las celdas) -->
+      <p data-reveal style="margin-top:32px; margin-bottom:12px;"><strong>Tabla 6</strong><br>Tipos de materiales para empaque</p>
+      <div class="ova-tabla" data-reveal style="margin-top:0; overflow-x:auto;"><table><thead><tr><th>Tipo de material</th><th>Ventaja</th><th>Desventaja</th><th>Uso principal</th></tr></thead><tbody>
+        <tr><td>Cestas (bambú o mimbre)</td><td>Livianas, biodegradables y de bajo costo.</td><td>Poca durabilidad y baja protección contra la humedad.</td><td>Mercados locales y transporte de corta distancia.</td></tr>
+        <tr><td>Sacos (yute o materiales naturales)</td><td>Durables, transpirables y biodegradables.</td><td>Sensibles a daños físicos.</td><td>Cultivos como cebolla, papa o café.</td></tr>
+        <tr><td>Cajas de madera</td><td>Durables y protegen los productos de daños físicos.</td><td>Pesadas, de mayor costo y requieren limpieza periódica.</td><td>Transporte de frutas y verduras.</td></tr>
+        <tr><td>Cajas de cartón</td><td>Bajo peso, económicas y con buena amortiguación.</td><td>Poco resistentes y sensibles a la humedad.</td><td>Empaque de productos livianos.</td></tr>
+        <tr><td>Cajas plásticas</td><td>Mayor resistencia, reutilizables y de fácil limpieza.</td><td>Alto costo y tienden a cristalizarse con exposición solar continua.</td><td>Gran variedad de productos, por su protección contra daños físicos.</td></tr>
+        <tr><td>Cajas de palets (madera, plástico o metal)</td><td>Larga duración y fácil de apilar con máquina elevadora.</td><td>Alto costo y difícil movimiento manual.</td><td>Transporte de productos a granel a largas distancias.</td></tr>
+      </tbody></table></div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Transporte y almacenamiento</strong></h3>
+      <p data-reveal>El transporte de productos agrícolas debe realizarse bajo condiciones estrictas que garanticen la inocuidad y preserven su calidad. Para ello, es indispensable verificar que los vehículos no hayan sido utilizados previamente para el traslado de animales, agroquímicos o cualquier otra sustancia que represente un riesgo de contaminación cruzada.</p>
+      <p data-reveal>Asimismo, previo a su comercialización, los productos se deben acopiar en centros agrologísticos que cumplan con la normativa de referencia (Resolución ICA 082394 de 2020, requisitos de poscosecha), en aspectos como los siguientes:</p>
+
+      <!-- El DI: "Acordeón" (nueve ítems; manda el rótulo). «Capacidad y flujo de trabajo » trae un espacio final en el Word (alerta de formato) -->
+      <div class="ova-acordeon" data-reveal style="margin-top:16px;">
+        <div class="ova-acordeon__item is-open">
+          <button class="ova-acordeon__head"><span><span class="num">01</span> <strong>Aislamiento sanitario</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Estar ubicados lejos de focos de insalubridad para proteger tanto el producto como a las comunidades aledañas.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">02</span> <strong>Control perimetral</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Mantener los alrededores limpios, ordenados y libres de residuos acumulados que puedan generar focos de contaminación.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">03</span> <strong>Hermeticidad y control de plagas</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Contar con instalaciones diseñadas para impedir el ingreso de plagas y mitigar la proliferación de vectores de enfermedades.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">04</span> <strong>Capacidad y flujo de trabajo</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Disponer de espacios amplios y proporcionales al volumen de almacenamiento, que faciliten la movilidad segura y eficiente del personal.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">05</span> <strong>Condiciones atmosféricas controladas</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Cuando el volumen y el producto lo requieran, contar con control de temperatura y humedad para asegurar la óptima conservación de cada tipo de producto.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">06</span> <strong>Restricción de fauna</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Prohibir estrictamente el ingreso y permanencia de animales en toda el área de las instalaciones.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">07</span> <strong>Calidad del agua</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Utilizar agua potable que cumpla rigurosamente con los parámetros de la Resolución 2115 de 2007.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">08</span> <strong>Gestión de residuos</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Disponer de un área exclusiva y cerrada, refrigerada cuando el volumen y el producto lo requieran, para el almacenamiento temporal de desechos orgánicos de rápida descomposición, evitando malos olores y contaminación.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">09</span> <strong>Bienestar laboral y trazabilidad</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Ofrecer servicios sanitarios y vestidores limpios y adecuados para los colaboradores, así como mantener un registro exhaustivo y actualizado de las entradas y salidas de mercancía.</div></div>
+        </div>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.3 · tema3-3 ════ -->
+      <section class="ova-seccion" id="tema3-3" data-reveal>
+        <h2 class="ova-seccion__titulo">Implementación de la trazabilidad en el proceso productivo</h2>
+        <p>La trazabilidad en los sistemas de producción agrícola es un pilar fundamental para garantizar la inocuidad y calidad de los alimentos. De acuerdo con la Norma Técnica Colombiana NTC 5522, este concepto se define como la capacidad de registrar y seguir el historial de un alimento a lo largo de todas las etapas de la cadena de suministro, desde su origen hasta el consumidor final.</p>
+      </section>
+      <p data-reveal>Para su correcta implementación, la norma estructura la trazabilidad en tres dimensiones operativas:</p>
+
+      <!-- El DI: "Acordeón" -->
+      <div class="ova-acordeon" data-reveal style="margin-top:16px;">
+        <div class="ova-acordeon__item is-open">
+          <button class="ova-acordeon__head"><span><span class="num">01</span> <strong>Trazabilidad hacia atrás o de proveedores</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Corresponde a la posibilidad de identificar qué productos, insumos o procesos intervienen en cada etapa, así como conocer quiénes son sus proveedores, verificando la procedencia de los insumos y su cumplimiento normativo.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">02</span> <strong>Trazabilidad interna o de proceso</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Hace referencia al seguimiento de los productos dentro de la propia empresa, con el objetivo de detectar fallas, riesgos u oportunidades de mejora antes de que el producto salga al mercado.</div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head"><span><span class="num">03</span> <strong>Trazabilidad hacia adelante o de clientes</strong></span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Capacidad de identificar qué productos salen de la empresa y determinar quiénes son sus clientes, a lo largo de cada una de las etapas de la cadena alimentaria.</div></div>
+        </div>
+      </div>
+
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:information-outline"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Importante</span><p style="margin:8px 0 0;">Para una adecuada trazabilidad, los productores deben documentar, entre otros, el registro de proveedores de fertilizantes y plaguicidas, la base de datos de proveedores de semillas, el registro de insumos usados, los registros contables de compra de insumos, el registro de adecuación de terrenos y tipo de semilla sembrada, los registros de mantenimiento y limpieza de equipos, el registro de aplicación e inventario de fertilizantes y plaguicidas, y los registros de mano de obra y de gastos por eventualidades.</p></div>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.4 · tema3-4 ════ -->
+      <section class="ova-seccion" id="tema3-4" data-reveal>
+        <h2 class="ova-seccion__titulo">Implementación de Buenas Prácticas Agrícolas con fines de certificación</h2>
+        <p>En Colombia, los productores que deseen certificar su finca en Buenas Prácticas Agrícolas deben cumplir con lo establecido en la Resolución 082394 de 2020, la cual define criterios técnicos y de trazabilidad relacionados con el uso de insumos, la dosificación y preparación de mezclas, el almacenamiento de productos cosechados, el bienestar de los trabajadores, el manejo de equipos y los componentes ambientales. Entre las áreas exigidas por esta normativa, se destacan las siguientes:</p>
+      </section>
+
+      <!-- Figura 11 del diseñador (Imagen 11) -->
+      <figure class="ova-figura ova-figura--plana" data-reveal style="margin-top:16px;">
+        <img src="assets/img/curso/figura-11-areas-certificacion.webp" alt="Seis áreas de la certificación. 1, instalaciones sanitarias: el predio debe contar con unidades sanitarias y un sistema básico para el tratamiento de aguas residuales, lavamanos en condiciones adecuadas y avisos visibles que promuevan las prácticas de limpieza entre los operarios. 2, área de almacenamiento de insumos: debe construirse con materiales resistentes y contar con control de ingreso de personal; los fertilizantes, bioinsumos y agroquímicos deben almacenarse en zonas separadas, debidamente etiquetados y señalizados. 3, área de dosificación y preparación de mezclas: puede estar ubicada en la bodega de insumos, siempre que cumpla condiciones de seguridad, con materiales resistentes, separación de productos por tipo, kit de primeros auxilios, instrumentos de medición y suministro de agua y ducha lavaojos. 4, área de acopio transitorio de productos cosechados: debe contar con techos e iluminación adecuados, evitar el contacto directo de los productos con el suelo, disponer de instructivos de higiene y prohibir el almacenamiento de productos de limpieza en este espacio. 5, área destinada al bienestar de los trabajadores: zona habilitada para el descanso y el consumo de alimentos, próxima a lavamanos en buen estado de funcionamiento. 6, área de almacenamiento de equipos y herramientas: espacio destinado a mantener los equipos y herramientas en condiciones de limpieza, orden y protección frente a contaminantes." />
+      </figure>
+
+      <p data-reveal style="margin-top:40px;">A nivel ambiental, la certificación evalúa además dos componentes complementarios: la gestión del recurso hídrico y el manejo de residuos sólidos y líquidos.</p>
+
+      <!-- El DI: "Comparativo" · tabla 1×2. DISEÑO: los dos lados son complementarios, no opuestos: icono en el divisor en vez de «VS» (arquitecto 2026-11-02) -->
+      <div class="ova-vs" data-reveal style="margin-top:16px;">
+        <div class="ova-vs__card">
+          <h3>Gestión del recurso hídrico</h3>
+          <p>Abastecimiento de agua, análisis de calidad del agua, permiso de concesión de aguas cuando aplique, plan de uso racional del agua y plan de gestión de riesgos.</p>
+        </div>
+        <div class="ova-vs__divider" aria-hidden="true"><iconify-icon icon="mdi:plus-thick" style="font-size:1.75rem;"></iconify-icon></div>
+        <div class="ova-vs__card ova-vs__card--alt">
+          <h3>Manejo de residuos sólidos y líquidos</h3>
+          <p>Plan de gestión de residuos, disposición de envases vacíos de plaguicidas y almacenamiento controlado de plaguicidas vencidos.</p>
+        </div>
+      </div>
+
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:head-question-outline"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Sabías que</span><p style="margin:8px 0 0;">En Colombia, los predios certificados en Buenas Prácticas Agrícolas se pueden consultar en el portal del ICA, que publica la fecha de certificación, el departamento, el municipio, el tipo de sistema productivo y el área total certificada de cada predio.</p></div>
+      </div>

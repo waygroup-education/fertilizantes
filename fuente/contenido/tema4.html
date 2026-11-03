@@ -1,0 +1,199 @@
+<style>
+  /* DISEÑO (fertilizantes, 2026-11-02): tablas en móvil, relleno 12 px; las de celda larga con ancho
+     mínimo 600 px (se desplazan más, pero se leen). Arreglo local; el del motor va como REQ KIT */
+  @media (max-width: 600px){
+    .ova-tabla th, .ova-tabla td { padding: 12px; }
+    .wg-tabla-ancha table { min-width: 600px; }
+  }
+  /* DISEÑO (fertilizantes, revisión del diagramador 2026-11-02, arquitecto 2026-11-02): el subtítulo de
+     cuerpo (párrafo en negrilla del Word) va un escalón bajo el h2 y la negrilla no sube el peso a 900 */
+  .wg-sub { font-size: 1.25rem; font-weight: 700; }
+  .wg-sub strong { font-weight: inherit; }
+  /* DISEÑO (fertilizantes, 2026-11-02): tabla con etapa agrupada: la etiqueta arriba en móvil y borde
+     sólido al abrir cada grupo */
+  @media (max-width: 600px){ .wg-tabla-grupos td[rowspan] { vertical-align: top; } }
+  .wg-tabla-grupos tr.wg-grupo td { border-top: 1px solid var(--border-c); }
+</style>
+
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Seguridad, salud y sostenibilidad en el sistema agrícola</h1>
+      </header>
+
+      <!-- Situación de partida · el texto es el cuadro (tabla 1×1) del Word bajo «Situación de partida:» -->
+      <div data-reveal style="margin-bottom:40px; padding:32px; background:linear-gradient(135deg, color-mix(in srgb, var(--c-acento) 10%, var(--bg-surface)) 0%, var(--bg-surface) 60%); border:1px solid color-mix(in srgb, var(--c-acento) 30%, var(--border-c)); border-radius:var(--r-lg); position:relative; overflow:hidden;">
+        <h3 style="font-family:var(--font-mono); font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; color:var(--c-acento); margin:0 0 16px; display:flex; align-items:center; gap:10px;"><iconify-icon icon="mdi:comment-question-outline" style="font-size:1.1rem;"></iconify-icon> Situación de partida</h3>
+        <p style="margin:0; font-size:1.02rem; line-height:1.6;">Imagina a un trabajador que lleva años fumigando sin utilizar protección respiratoria ni auditiva porque, según él, “nunca le ha pasado nada”. Mientras tanto, en la finca, los envases vacíos de plaguicidas se acumulan junto a las herramientas de trabajo cotidianas, sin ningún protocolo de seguridad.</p>
+        <p style="margin:14px 0 0; font-size:1.02rem; line-height:1.6;"><strong>Antes de avanzar, reflexiona sobre esto:</strong> ¿por qué la ausencia de un accidente no equivale a la ausencia de riesgo? Identificar con precisión los peligros de las labores agrícolas y gestionar correctamente los residuos peligrosos son los pilares de una producción segura, responsable y sostenible. Este será, justamente, el núcleo de nuestro estudio en este tema.</p>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.1 · tema4-1 ════ -->
+      <section class="ova-seccion" id="tema4-1" data-reveal>
+        <h2 class="ova-seccion__titulo">Tipos de peligros en las labores agrícolas</h2>
+        <p class="ova-seccion__lead">Las actividades propias del sector agrícola implican una exposición constante a diversas situaciones de peligro, las cuales pueden afectar, de manera significativa, la salud de los trabajadores y, en algunos casos, también el equilibrio del entorno. De acuerdo con el Ministerio de Trabajo y la Organización Iberoamericana de Seguridad Social (2018), los principales peligros a los que se encuentran expuestos los trabajadores del sector agrícola son los siguientes, agrupados según las clases de la Guía Técnica Colombiana GTC 45: biológico, físico, químico, psicosocial, biomecánico, condiciones de seguridad (mecánico, locativo, eléctrico, tecnológico, accidentes de tránsito, públicos, trabajo en alturas y espacios confinados) y fenómenos naturales:</p>
+      </section>
+
+      <!-- El DI: "Carrusel" (ocho tarjetas) -->
+      <div class="ova-carrusel ova-carrusel--tarjetas" data-reveal>
+        <div class="ova-carrusel__track-wrap"><div class="ova-carrusel__track">
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:volume-high"></iconify-icon><h4><strong>Peligros físicos</strong></h4><p>El ruido de la maquinaria pesada causa fatiga y pérdida auditiva progresiva. Por su parte, las vibraciones de herramientas motorizadas provocan trastornos circulatorios y musculoesqueléticos, mientras que la radiación solar prolongada genera quemaduras, golpes de calor y un alto riesgo de cáncer de piel.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:flask-outline"></iconify-icon><h4><strong>Peligros químicos</strong></h4><p>La manipulación de plaguicidas durante su preparación o aplicación provoca intoxicaciones agudas y crónicas. Asimismo, el contacto inadecuado con fertilizantes químicos causa irritaciones cutáneas y respiratorias, un riesgo que se intensifica por la inhalación de nieblas, gases y vapores en el ambiente.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:bacteria-outline"></iconify-icon><h4><strong>Peligros biológicos</strong></h4><p>El contacto con virus, bacterias y hongos en el suelo, agua, plantas o animales transmite graves infecciones y enfermedades. Adicionalmente, las picaduras o mordeduras de insectos, serpientes y arácnidos pueden desencadenar reacciones alérgicas severas, intoxicaciones o lesiones de urgencia.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:head-heart-outline"></iconify-icon><h4><strong>Peligros psicosociales</strong></h4><p>Las jornadas extensas, el aislamiento en zonas rurales y la presión por cumplir con la cosecha generan estrés, fatiga mental y alteraciones del sueño y del estado de ánimo, y aumentan la probabilidad de accidentes.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:human-handsup"></iconify-icon><h4><strong>Peligros biomecánicos o ergonómicos</strong></h4><p>Las posturas forzadas y prolongadas derivan en fatiga muscular crónica y trastornos osteomusculares. A esto se suman los movimientos repetitivos, que saturan el sistema musculoesquelético y provocan lesiones por esfuerzo acumulado en articulaciones y tendones.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:tractor"></iconify-icon><h4><strong>Peligros de condiciones de seguridad: mecánico</strong></h4><p>La operación de maquinaria agrícola conlleva riesgos críticos de atrapamiento, cortes y amputaciones. De igual forma, el uso de herramientas manuales (como machetes, hoces o tijeras de podar) eleva la probabilidad de heridas profundas y golpes por proyección de partículas o fallas en el equipo.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:slope-uphill"></iconify-icon><h4><strong>Peligros de condiciones de seguridad: locativo</strong></h4><p>Los terrenos inestables, con pendientes pronunciadas o humedad excesiva, dificultan la preparación y el manejo del suelo y aumentan el riesgo de caídas y accidentes.</p></div>
+          <div class="ova-carrusel__slide"><iconify-icon icon="mdi:weather-lightning-rainy"></iconify-icon><h4><strong>Fenómenos naturales</strong></h4><p>La exposición a tormentas eléctricas, rayos y lluvias intensas representa un peligro significativo para la salud y la integridad de los trabajadores durante las labores al aire libre.</p></div>
+        </div></div>
+        <div class="ova-carrusel__nav"><div class="ova-carrusel__dots"></div><div class="ova-carrusel__arrows"><button class="ova-carrusel__arrow" data-ova-carrusel-prev><iconify-icon icon="mdi:arrow-left"></iconify-icon></button><button class="ova-carrusel__arrow" data-ova-carrusel-next><iconify-icon icon="mdi:arrow-right"></iconify-icon></button></div></div>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.2 · tema4-2 ════ -->
+      <section class="ova-seccion" id="tema4-2" data-reveal>
+        <h2 class="ova-seccion__titulo">Riesgos asociados a cada etapa del proceso productivo</h2>
+        <p class="ova-seccion__lead">De acuerdo con los tipos de peligros presentes en las actividades agrícolas, los riesgos derivados pueden ocasionar enfermedades laborales y accidentes que impactan tanto la salud de los trabajadores como el entorno y la continuidad del sistema productivo (Ministerio de Trabajo y Organización Iberoamericana de Seguridad Social, 2018).</p>
+      </section>
+
+      <!-- Tabla 7 del Word. DISEÑO: la etapa repetida en filas consecutivas se agrupa con rowspan (3+2+2+2); el texto no cambia (arquitecto 2026-11-02) -->
+      <p data-reveal style="margin-top:0; margin-bottom:12px;"><strong>Tabla 7</strong><br>Etapas y tipos de riesgo</p>
+      <div class="ova-tabla wg-tabla-grupos" data-reveal style="margin-top:0; overflow-x:auto;"><table><thead><tr><th>Etapa</th><th>Tipo de peligro</th><th>Origen</th><th>Riesgo</th></tr></thead><tbody>
+        <tr class="wg-grupo"><td rowspan="3"><strong>Selección de semillas y preparación del terreno</strong></td><td>Físicos</td><td>Altos niveles de ruido y vibraciones por manejo de equipos; alta exposición a radiación solar.</td><td>Pérdida de audición, irritabilidad, trastornos musculares, quemaduras y enfermedades de la piel.</td></tr>
+        <tr><td>Condiciones de seguridad (mecánico)</td><td>Uso de herramientas como palas, machetes, guadañas y maquinaria tipo tractor.</td><td>Amputación, atrapamientos, golpes, heridas.</td></tr>
+        <tr><td>Biomecánicos</td><td>Posturas inadecuadas, desplazamientos, movimientos repetitivos, transporte de cargas.</td><td>Problemas en huesos y músculos, lesiones físicas, cansancio.</td></tr>
+        <tr class="wg-grupo"><td rowspan="2"><strong>Establecimiento y mantenimiento del cultivo</strong></td><td>Condiciones de seguridad (locativo)</td><td>Labores sobre terrenos inclinados, con alta humedad.</td><td>Caídas, cansancio, golpes.</td></tr>
+        <tr><td>Biológicos</td><td>Contacto con virus y bacterias del suelo y del agua; presencia de serpientes, roedores u otros animales.</td><td>Mordeduras, infecciones, alergias.</td></tr>
+        <tr class="wg-grupo"><td rowspan="2"><strong>Manejo de plagas y enfermedades</strong></td><td>Químicos</td><td>Preparación de mezclas de agroquímicos, contacto con fertilizantes, aplicación en terreno.</td><td>Alergias, afectaciones en la piel, intoxicaciones, enfermedades.</td></tr>
+        <tr><td>Biomecánicos</td><td>Aplicación de insumos con bomba de espalda, inadecuada postura, cargas de elevado peso.</td><td>Cansancio, dolores musculares, dolor de espalda.</td></tr>
+        <tr class="wg-grupo"><td rowspan="2"><strong>Cosecha y poscosecha</strong></td><td>Biomecánicos</td><td>Recolección y selección de los frutos.</td><td>Posturas inadecuadas, cansancio, estrés, dolores musculares.</td></tr>
+        <tr><td>Biológicos</td><td>Contacto con microorganismos patógenos y con animales como zancudos, mosquitos, serpientes o roedores.</td><td>Enfermedades, mordeduras, picaduras.</td></tr>
+      </tbody></table></div>
+
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:information-outline"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Importante</span><p style="margin:8px 0 0;">Identificar el tipo de peligro asociado a cada etapa del proceso productivo es el primer paso para diseñar controles de prevención efectivos; un mismo peligro puede requerir diferentes medidas, según la actividad y el momento del ciclo productivo en que se presente.</p></div>
+      </div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Controles asociados a la prevención y disminución de riesgos</strong></h3>
+      <p data-reveal>Como parte de las buenas prácticas agrícolas, es indispensable implementar medidas de prevención y control de riesgos que garanticen la seguridad de los trabajadores y permitan el desarrollo de las actividades cotidianas de manera eficiente y protegida. Entre las principales acciones se destacan:</p>
+
+      <!-- Las cinco viñetas del Word, como lista en caja (patrón de extintores y carga-pesada) -->
+      <div data-reveal style="margin-top:16px; padding:24px 28px; background:var(--bg-surface); border:1px solid var(--border-c); border-radius:var(--r-md);"><ul style="list-style:none; padding:0; margin:0; display:grid; gap:10px;">
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Capacitar de forma continua al personal en prácticas agrícolas seguras y en el manejo correcto de insumos, herramientas y maquinaria.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Rotar las labores para reducir la exposición prolongada a un mismo tipo de peligro, como el ruido, la radiación solar o los movimientos repetitivos.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Realizar pausas activas durante la jornada, con el fin de prevenir trastornos musculoesqueléticos derivados de posturas inadecuadas o esfuerzos repetitivos.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Efectuar el mantenimiento periódico de la maquinaria y de las herramientas, para evitar condiciones inseguras que puedan derivar en accidentes.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Realizar exámenes médicos periódicos, con el fin de monitorear el estado de salud de los trabajadores expuestos a agroquímicos u otros factores de riesgo. En los trabajadores expuestos a organofosforados y carbamatos, incluir el examen de colinesterasa en la vigilancia médica.</span></li>
+      </ul></div>
+
+      <!-- El DI: "Jerarquía de controles" (rótulo en rojo sin pieza en el catálogo de Waygroup): recuadro con el rótulo literal, párrafo entero (arquitecto 2026-11-02) -->
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:stairs-up"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Jerarquía de controles</span><p style="margin:8px 0 0;">Primero elimina o sustituye el peligro (por ejemplo, con manejo integrado de plagas o con productos de menor categoría toxicológica); luego controla en la fuente (equipos calibrados, mezclas en un área ventilada); después organiza el trabajo (horarios frescos, rotación de tareas, señalización) y, por último, usa el EPP. Esta es la jerarquía de controles del Decreto 1072 de 2015 (art. 2.2.4.6.24).</p></div>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.3 · tema4-3 ════ -->
+      <section class="ova-seccion" id="tema4-3" data-reveal>
+        <h2 class="ova-seccion__titulo">Uso de elementos de protección personal (EPP)</h2>
+        <p class="ova-seccion__lead">En el ámbito agrícola es común el uso de productos químicos, bioinsumos y sustancias de origen orgánico para el control de plagas. Sin embargo, la manipulación de estos insumos representa riesgos considerables para la salud de quienes los aplican, por lo que el uso adecuado de los EPP es una estrategia esencial para reducir la exposición a contaminantes (Cámara de Sanidad Agropecuaria y Fertilizantes, s. f.).</p>
+      </section>
+      <p data-reveal>El uso de elementos de protección personal (EPP) es un requisito indispensable durante la manipulación y aplicación de plaguicidas. La selección de estos equipos específicos depende tanto de la naturaleza química del producto como de la actividad a realizar; por lo general, el equipamiento básico incluye guantes de nitrilo o neopreno, respirador con filtros para vapores orgánicos y prefiltro para partículas, según la etiqueta (una mascarilla de tela no protege), gafas de seguridad, botas impermeables y ropa de protección especializada (ANDI, 2020).</p>
+
+      <div class="ova-callout" style="margin-top:24px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:lightbulb-on"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Ten en cuenta</span><p style="margin:8px 0 0;">Las manos representan la zona del cuerpo con mayor vulnerabilidad ante la exposición a plaguicidas. Por este motivo, es indispensable utilizar guantes de caña larga de nitrilo o neopreno, materiales impermeables. Estos equipos de protección individual garantizan una alta resistencia a la permeabilidad y aseguran una protección continua durante toda la jornada laboral.</p></div>
+      </div>
+
+      <p data-reveal style="margin-top:24px;">El tipo de EPP a utilizar depende, además, del método de aplicación empleado: espolvoreo, pulverización, fumigación, aplicación de cebos, riego, aplicación directa al suelo o granulado. Asimismo, se debe evitar el reingreso a las áreas tratadas hasta que se cumpla el tiempo de seguridad establecido en la etiqueta de cada producto, y el overol de protección reutilizable debe lavarse inmediatamente después de concluir las labores de aplicación, sin mezclarlo con prendas que no hayan estado en contacto con plaguicidas.</p>
+
+      <!-- DESVIACIÓN DEL DI: el Word dice "Carrusel" (dos tarjetas); va como grilla de dos por §3 Carrusel («NO si son 3 o menos, mejor grid»), arquitecto 2026-11-02 -->
+      <div class="ova-grid-2" data-reveal style="margin-top:16px;">
+        <div style="padding:28px; background:var(--bg-surface); border:1px solid var(--border-c); border-radius:var(--r-lg);">
+          <div style="width:44px; height:44px; border-radius:12px; background:var(--grad-brand); display:grid; place-items:center; color:#fff; margin-bottom:16px;"><iconify-icon icon="mdi:clipboard-check-outline" style="font-size:1.3rem;"></iconify-icon></div>
+          <h4 style="margin:0 0 10px;"><strong>Selección, uso y reposición</strong></h4>
+          <p style="margin:0; font-size:.95rem;">Selecciona el EPP según la etiqueta y la hoja de datos de seguridad (HDS) del producto. Antes de cada uso, revisa que esté completo y en buen estado; al terminar la jornada, lava el EPP reutilizable por separado de la ropa de uso diario y reemplaza de inmediato lo deteriorado (guantes rotos, filtros saturados).</p>
+        </div>
+        <div style="padding:28px; background:var(--bg-surface); border:1px solid var(--border-c); border-radius:var(--r-lg);">
+          <div style="width:44px; height:44px; border-radius:12px; background:var(--grad-brand); display:grid; place-items:center; color:#fff; margin-bottom:16px;"><iconify-icon icon="mdi:hand-wash-outline" style="font-size:1.3rem;"></iconify-icon></div>
+          <h4 style="margin:0 0 10px;"><strong>Retiro del EPP</strong></h4>
+          <p style="margin:0; font-size:.95rem;">Retira el EPP en este orden: lava los guantes puestos, quítate el overol, las botas, las gafas y el respirador, y por último los guantes; lávate las manos y báñate.</p>
+        </div>
+      </div>
+
+      <!-- Figura 12 del diseñador (Imagen 12) -->
+      <figure class="ova-figura ova-figura--plana" data-reveal style="margin-top:32px;">
+        <img src="assets/img/curso/figura-12-epp-labores-agricolas.webp" alt="Elementos de protección personal para labores agrícolas. 1, sombrero o gorro: brinda protección contra la radiación solar, evitando daños en la piel y reduciendo los efectos de la exposición a altas temperaturas de trabajo al aire libre. 2, gafas de seguridad: fundamentales cuando se manipulan plaguicidas, pues protegen los ojos de salpicaduras y de la exposición a sustancias químicas; también se recomiendan en labores de guadañado o preparación de terrenos. 3, traje de protección: cubre completamente el cuerpo para evitar el contacto directo con sustancias peligrosas, en especial con plaguicidas; existen versiones desechables y reutilizables, estas últimas requieren un lavado y mantenimiento adecuados. 4, guantes de protección: elaborados en materiales que impiden la filtración o el contacto de sustancias químicas y tóxicas con la piel, como nitrilo o neopreno, según el tipo de labor y el nivel de riesgo. 5, máscaras respiradoras: protegen frente a la inhalación de polvos, vapores y aerosoles tóxicos; es indispensable verificar la calidad de los filtros y reemplazarlos oportunamente. 6, botas de seguridad: aseguran la protección de los pies frente a pinchazos, caídas de objetos y contacto con plaguicidas o fertilizantes; se recomienda que sean de caucho o PVC, de caña alta y con el pantalón por fuera." />
+      </figure>
+
+      <!-- ════ Sección {{NUM}}.4 · tema4-4 ════ -->
+      <section class="ova-seccion" id="tema4-4" data-reveal>
+        <h2 class="ova-seccion__titulo">Manejo de residuos en la producción agrícola</h2>
+        <p class="ova-seccion__lead">Las actividades agrícolas generan residuos sólidos y líquidos que, por su naturaleza y volumen, requieren una gestión adecuada para prevenir impactos negativos en la salud humana y en el ambiente.</p>
+      </section>
+
+      <!-- Tres subtítulos en negrilla del Word, al mismo nivel -->
+      <h3 class="wg-sub" style="margin:0 0 16px;" data-reveal><strong>Manejo de residuos orgánicos</strong></h3>
+      <p data-reveal>En la mayoría de los casos, las malezas se dejan descomponer directamente sobre el terreno, reincorporándose al suelo como materia orgánica. Otra alternativa ampliamente utilizada es el compostaje, que consiste en la formación de pilas de residuos vegetales mezclados con materiales de origen animal, como estiércol de ganado, a las que se pueden adicionar microorganismos eficientes para acelerar la descomposición (Ramos et al., 2021).</p>
+
+      <div class="ova-callout" style="margin-top:24px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:information-outline"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Importante</span><p style="margin:8px 0 0;">El compostaje es un proceso aerobio: requiere volteos periódicos de la pila para oxigenarla (Noriega et al., 2023). Durante la fase caliente (55 °C o más por varios días) se eliminan patógenos y semillas de arvenses; por eso no apliques estiércol fresco a cultivos que se consumen crudos.</p></div>
+      </div>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Residuos de envases de plaguicidas</strong></h3>
+      <p data-reveal>Los envases vacíos de plaguicidas son un residuo de alto riesgo ambiental: aplica el triple lavado, perfóralos y entrégalos al programa posconsumo, como se explicó en 2.5.</p>
+
+      <h3 class="wg-sub" style="margin:40px 0 16px;" data-reveal><strong>Residuos aprovechables y ordinarios</strong></h3>
+      <p data-reveal>El productor agrícola debe verificar si el municipio donde se ubica su sistema productivo cuenta con un Plan de Gestión Integral de Residuos Sólidos (PGIRS) para la zona rural, e implementar además un plan interno de gestión de residuos para aquellos que no son aprovechables o que representan un riesgo por su peligrosidad.</p>
+
+      <!-- Figura 13 del diseñador (Imagen 13): justo antes del «Recuerda», que dice «este código de colores» -->
+      <figure class="ova-figura ova-figura--plana" data-reveal style="margin-top:16px;">
+        <img src="assets/img/curso/figura-13-residuos-por-color.webp" alt="Clasificación de residuos por color. Verde: residuos orgánicos aprovechables. Blanco: residuos reciclables (plástico, vidrio, papel, metal). Negro: residuos no aprovechables. Los envases de plaguicidas, aun con triple lavado, no van en estas canecas: se entregan al programa posconsumo." />
+      </figure>
+
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:bookmark-check-outline"></iconify-icon></div>
+        <div><span class="ova-callout__tag">Recuerda</span><p style="margin:8px 0 0;">En Colombia, la separación en la fuente de residuos sólidos está regulada por la Resolución 2184 de 2019, la cual establece este código de colores de aplicación nacional.</p></div>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.5 · tema4-5 ════ -->
+      <section class="ova-seccion" id="tema4-5" data-reveal>
+        <h2 class="ova-seccion__titulo">Medidas de seguridad en la aplicación de fertilizantes y plaguicidas</h2>
+        <p class="ova-seccion__lead">El manejo de fertilizantes y plaguicidas debe realizarse bajo estrictas condiciones de seguridad química, con el propósito de proteger tanto a los trabajadores como al entorno agrícola. Para prevenir accidentes y enfermedades, es fundamental aplicar las siguientes recomendaciones (SURA, 2019):</p>
+      </section>
+
+      <!-- Las quince viñetas del Word, como lista en caja. DISEÑO: la última («Ante una intoxicación…») sale de la caja a un recuadro de peligro justo después, en el mismo orden del DI (arquitecto 2026-11-02) -->
+      <div data-reveal style="padding:24px 28px; background:var(--bg-surface); border:1px solid var(--border-c); border-radius:var(--r-md);"><ul style="list-style:none; padding:0; margin:0; display:grid; gap:10px;">
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Disponer de una bodega o área específica para el almacenamiento de fertilizantes, separada del espacio destinado a plaguicidas, evitando así la contaminación cruzada.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Mantener los recipientes, envases y sacos siempre cerrados, para impedir derrames o pérdidas de producto.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Contar con las hojas de datos de seguridad (HDS) de cada insumo, accesibles para consulta inmediata.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Verificar que todos los productos tengan su etiqueta clara y legible, donde se identifiquen peligros y riesgos asociados a su manipulación.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Evitar el trasvase de fertilizantes o plaguicidas en envases de alimentos o bebidas, puesto que incrementa el riesgo de intoxicaciones accidentales.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Capacitar periódicamente al personal, en el uso seguro de fertilizantes y plaguicidas.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>No aplicar con viento fuerte (más de 10 km/h) ni en horas de calor; con brisa suave, avanzar de modo que la nube se aleje del aplicador y de los cultivos vecinos.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>No comer, beber ni fumar durante la aplicación.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Señalizar las áreas tratadas con fumigación, indicando los tiempos de reingreso al cultivo.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Dejar una franja de seguridad sin aplicar junto a ríos, quebradas y nacimientos de agua, según lo que indiquen la norma y la etiqueta del producto (Decreto 1843 de 1991).</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Lavar equipos y herramientas inmediatamente después de las aplicaciones.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Los trabajadores deben ducharse al finalizar las labores agrícolas, especialmente si hubo contacto con agroquímicos.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Realizar exámenes médicos periódicos para monitorear el estado de salud del personal expuesto.</span></li>
+        <li style="display:flex; gap:10px; align-items:flex-start;"><iconify-icon icon="mdi:check-circle-outline" style="color:var(--c-acento); font-size:1.1rem; margin-top:3px; flex-shrink:0;"></iconify-icon><span>Garantizar que las áreas de almacenamiento dispongan de botiquín de primeros auxilios y un kit antiderrames.</span></li>
+      </ul></div>
+
+      <div class="ova-callout ova-callout--danger" style="margin-top:16px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:medical-bag"></iconify-icon></div>
+        <div><p style="margin:0;">Ante una intoxicación: retirar a la persona de la zona, quitarle la ropa contaminada, lavar la piel con abundante agua, llamar al 123 o a CISPROQUIM y llevar la etiqueta del producto al centro de salud. Notificar el caso al SIVIGILA.</p></div>
+      </div>
+
+      <p data-reveal style="margin-top:32px;">Medidas específicas para la aplicación de plaguicidas con bomba de espalda:</p>
+
+      <!-- Figura 14 del diseñador (Imagen 14) -->
+      <figure class="ova-figura ova-figura--plana" data-reveal style="margin-top:16px;">
+        <img src="assets/img/curso/figura-14-bomba-de-espalda.webp" alt="Seis medidas con la bomba de espalda. 1, asegurarse de que la bomba de espalda esté limpia y sin fugas antes de iniciar la aplicación. 2, limpiar las boquillas con herramientas adecuadas, evitando destaparlas con la boca. 3, revisar que la válvula de salida y sus empaques estén en buen estado. 4, usar siempre la máscara de protección para prevenir la inhalación de vapores y partículas. 5, al realizar aplicaciones hacia arriba, introducir las mangas dentro de los guantes; en aplicaciones hacia abajo, las mangas deben cubrir los guantes para evitar filtraciones. 6, al terminar, lava la bomba en el lote tratado y aplica el agua de lavado sobre el mismo cultivo; nunca cerca de fuentes de agua." />
+      </figure>
+
+      <!-- Pódcast (el DI: «(Vincular pódcast)»): es un video de YouTube («Síntesis curso…»); va al final de 4.5, donde lo pone el Word, mientras el cliente responde la duda A1 (ERRORES-ORIGEN-2026-11-02) -->
+      <div class="ova-video" data-reveal style="margin-top:40px;">
+        <div class="ova-video__frame" style="position:relative; padding-top:56.25%; border-radius:var(--r-lg); overflow:hidden; background:#000;">
+          <iframe src="https://www.youtube.com/embed/GnXum1EOgq4" title="Pódcast · Síntesis curso Buenas Prácticas Agrícolas (BPA) y aplicación segura de fertilizantes y plaguicidas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
+        </div>
+      </div>

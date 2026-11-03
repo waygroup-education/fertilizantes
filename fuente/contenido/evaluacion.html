@@ -1,0 +1,384 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Evaluación</div>
+        <h1 class="ova-screen__title">Evaluación</h1>
+      </header>
+
+      <!-- Evaluación estándar Waygroup: sin cabecera superior; el tema va dentro de cada actividad;
+           la franja inferior lleva anterior · progreso · contador · siguiente.
+           Fuente: insumos/preguntas/Banco_Preguntas_BPA_Aplicacion_Segura.docx (20 ítems de selección
+           múltiple con única respuesta). Caso, pregunta, opciones, clave y justificación literales del banco;
+           la justificación es la retroalimentación para acierto y error, con la «Referencia en el DI» al final
+           (plan del diagramador, arquitecto 2026-11-02). La ficha técnica, la matriz y la clave no van: son
+           del instrumento. Contador «Pregunta N de 20» (numeral del banco). -->
+      <div class="ova-evalquiz" data-ova-evalquiz data-label-item="Pregunta" data-label-items="preguntas" data-reveal>
+
+        <div class="ova-evalquiz__slide is-active" data-slide="intro">
+          <div class="ova-eval__cuerpo">
+            <!-- «3. Instrucciones para el participante» del banco, literal -->
+            <p class="ova-eval__lead">Lee cada caso con atención. Cada pregunta presenta una situación de campo y cuatro opciones de respuesta (A, B, C y D). Solo una opción es correcta: elige la decisión técnicamente adecuada según las Buenas Prácticas Agrícolas y la normativa estudiada en el curso.</p>
+            <div class="ova-eval__datos">
+              <div class="ova-eval__dato"><span class="v">20</span><span class="l">preguntas</span></div>
+              <div class="ova-eval__dato"><span class="v">1</span><span class="l">tipo: selección múltiple con única respuesta</span></div>
+              <div class="ova-eval__dato"><span class="v"><iconify-icon icon="mdi:message-reply-text-outline"></iconify-icon></span><span class="l">retroalimentación en cada respuesta, aciertes o no</span></div>
+            </div>
+            <button class="ova-evalquiz__btn ova-evalquiz__btn--primary" data-evalquiz-go="1">Comenzar <iconify-icon icon="mdi:arrow-right"></iconify-icon></button>
+            <p class="ova-eval__ayuda">También puedes moverte con las flechas del teclado.</p>
+          </div>
+        </div>
+
+        <!-- Pregunta 1 del banco · clave C -->
+        <div class="ova-evalquiz__slide" data-slide="sm-1" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 1. Preparación y manejo del suelo</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Don Hernán va a establecer un cultivo tecnificado de aguacate en un predio donde debe talar un relicto de árboles para ampliar el área. Además, planea instalar riego captando agua de la quebrada que atraviesa la finca. Ya contrató la preparación del terreno para la próxima semana.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión debe tomar antes de iniciar las labores?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Iniciar la preparación del terreno y tramitar los permisos cuando el cultivo esté establecido, porque el aprovechamiento tiene fines agrícolas.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Solicitar ante el ICA el registro del predio, porque esta entidad autoriza la tala y la captación de agua con fines agrícolas.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>C.</strong> Gestionar ante la autoridad ambiental el permiso de aprovechamiento forestal y la concesión de aguas, conforme al Decreto 1076 de 2015.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Realizar únicamente el análisis de suelos en un laboratorio acreditado por el ONAC, porque es el único requisito previo a la siembra.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="El diseño instruccional establece que, según el sistema que se va a implementar, se debe gestionar ante la autoridad ambiental el permiso de aprovechamiento forestal y el permiso de concesión de agua cuando se capte de fuentes lénticas o lóticas, conforme al Decreto 1076 de 2015. Estos trámites son previos a la intervención. El ICA no otorga estos permisos, y el análisis de suelos es un requerimiento adicional, no el único. Referencia en el DI: 1.3 Reconocimiento del terreno." data-wrong="El diseño instruccional establece que, según el sistema que se va a implementar, se debe gestionar ante la autoridad ambiental el permiso de aprovechamiento forestal y el permiso de concesión de agua cuando se capte de fuentes lénticas o lóticas, conforme al Decreto 1076 de 2015. Estos trámites son previos a la intervención. El ICA no otorga estos permisos, y el análisis de suelos es un requerimiento adicional, no el único. Referencia en el DI: 1.3 Reconocimiento del terreno."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 2 del banco · clave A -->
+        <div class="ova-evalquiz__slide" data-slide="sm-2" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 1. Preparación y manejo del suelo</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Al recorrer un lote en ladera, la técnica encuentra zanjas profundas a lo largo del terreno que no desaparecieron con las labores de labranza del ciclo anterior. El productor propone volver a arar el lote con mayor profundidad.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión técnica es la más adecuada?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="true"><strong>A.</strong> Descartar la propuesta, porque se trata de erosión en cárcavas, que no se corrige con labranza convencional, y planear obras biomecánicas como trinchos, terrazas o gaviones.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Aceptar la propuesta, porque se trata de erosión en surcos, que se elimina con las labores normales de labranza.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Aceptar la propuesta y complementarla con siembra a favor de la pendiente, para que el agua drene con mayor rapidez.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Descartar la propuesta y aplicar cal agrícola en las zanjas, porque la presencia de erosión indica acidez del suelo.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="Las zanjas profundas que no desaparecen con la labranza convencional corresponden a erosión en cárcavas, que es compleja de controlar. La erosión en surcos, en cambio, forma canales poco profundos que sí se eliminan con la labranza. Para terrenos vulnerables a la erosión o a la remoción en masa, el curso recomienda obras biomecánicas de bajo costo, como trinchos, terrazas y gaviones. Referencia en el DI: 1.3 Erosión en los suelos / 1.5 Para profundizar." data-wrong="Las zanjas profundas que no desaparecen con la labranza convencional corresponden a erosión en cárcavas, que es compleja de controlar. La erosión en surcos, en cambio, forma canales poco profundos que sí se eliminan con la labranza. Para terrenos vulnerables a la erosión o a la remoción en masa, el curso recomienda obras biomecánicas de bajo costo, como trinchos, terrazas y gaviones. Referencia en el DI: 1.3 Erosión en los suelos / 1.5 Para profundizar."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 3 del banco · clave D -->
+        <div class="ova-evalquiz__slide" data-slide="sm-3" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 1. Preparación y manejo del suelo</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Un productor observa que el suelo de su lote tiene un color rojizo y concluye que es un suelo ácido. Ya compró cal viva y planea aplicarla esta semana sin realizar ningún otro paso.</p>
+              <h3 class="ova-quiz__question">¿Qué debe decidir el productor?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Aplicar la cal viva, porque el color rojizo confirma la acidez y la cal viva es la enmienda recomendada.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Reemplazar la cal viva por un fertilizante nitrogenado, porque el color rojizo indica deficiencia de nitrógeno.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Aplicar la cal viva en un día con viento, para que se distribuya de manera uniforme en todo el lote.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>D.</strong> Suspender la aplicación y realizar un análisis de pH, porque el color rojizo indica óxidos de hierro y buen drenaje, no acidez.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="Según el diseño instruccional, los colores rojizos indican presencia de óxidos de hierro y buen drenaje, y la acidez solo se conoce con un análisis de pH. Además, el encalado debe hacerse preferiblemente con cal agrícola o cal dolomita, en la dosis que indique el análisis y con supervisión de un agrónomo. La cal viva es cáustica y no debe aplicarse con viento. Referencia en el DI: 1.4.1 Propiedades físicas / 1.4.2 Características químicas." data-wrong="Según el diseño instruccional, los colores rojizos indican presencia de óxidos de hierro y buen drenaje, y la acidez solo se conoce con un análisis de pH. Además, el encalado debe hacerse preferiblemente con cal agrícola o cal dolomita, en la dosis que indique el análisis y con supervisión de un agrónomo. La cal viva es cáustica y no debe aplicarse con viento. Referencia en el DI: 1.4.1 Propiedades físicas / 1.4.2 Características químicas."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 4 del banco · clave B -->
+        <div class="ova-evalquiz__slide" data-slide="sm-4" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 1. Preparación y manejo del suelo</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> En una finca de ladera, después de cada aguacero se observa escorrentía que arrastra suelo hacia la parte baja del predio. El productor va a establecer un nuevo ciclo de hortalizas y debe definir el trazado de la siembra.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión reduce de manera más efectiva la pérdida de suelo?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Sembrar en hileras a favor de la pendiente, para facilitar que el agua de lluvia salga rápidamente del lote.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>B.</strong> Sembrar en curvas de nivel y mantener coberturas vivas o muertas, para reducir la escorrentía y proteger la superficie.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Realizar una labranza total y profunda del lote, para aflojar el suelo y aumentar la infiltración del agua.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Retirar los residuos vegetales de la superficie, para evitar que el agua se acumule sobre el lote.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="La siembra en curvas de nivel se alinea con la topografía y mitiga el impacto de la escorrentía y la erosión hídrica. Las coberturas vivas o muertas conservan la humedad y frenan la degradación superficial. La labranza total aumenta la presión mecánica sobre el suelo; por eso el curso recomienda la labranza mínima. Retirar la cobertura deja el suelo expuesto. Referencia en el DI: 1.5 Prácticas de conservación del suelo y del agua." data-wrong="La siembra en curvas de nivel se alinea con la topografía y mitiga el impacto de la escorrentía y la erosión hídrica. Las coberturas vivas o muertas conservan la humedad y frenan la degradación superficial. La labranza total aumenta la presión mecánica sobre el suelo; por eso el curso recomienda la labranza mínima. Retirar la cobertura deja el suelo expuesto. Referencia en el DI: 1.5 Prácticas de conservación del suelo y del agua."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 5 del banco · clave B -->
+        <div class="ova-evalquiz__slide" data-slide="sm-5" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 2. Manejo del cultivo y uso responsable de insumos</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Para un análisis de fertilidad, un operario tomó cinco submuestras junto a la cerca, a 40 cm de profundidad, en dos zonas del predio con distinto color de suelo y relieve, y las mezcló en una sola bolsa.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión debe tomar el técnico responsable?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Enviar la muestra al laboratorio, porque mezclar zonas distintas garantiza que el resultado represente todo el predio.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>B.</strong> Repetir el muestreo: dividir el predio en lotes homogéneos, recorrer cada uno en zigzag y tomar de 15 a 20 submuestras de 0 a 20 cm, descartando los bordes.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Reemplazar el muestreo por una calicata en el centro del predio, porque es el método de rutina para el análisis de fertilidad.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Conservar la muestra y completarla con más submuestras tomadas junto a la cerca, hasta alcanzar cerca de un kilogramo.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="El procedimiento exige demarcar el terreno según el relieve, el color del suelo y la cobertura para que la muestra sea representativa. En cada lote homogéneo se recorre en zigzag y se toman de 15 a 20 submuestras de 0 a 20 cm (o la profundidad que indique el laboratorio), descartando los bordes para evitar contaminación. La calicata sirve para observar el perfil, pero no se usa en el muestreo de rutina para fertilidad. Referencia en el DI: 2.2 Análisis de suelos: procedimiento para el muestreo." data-wrong="El procedimiento exige demarcar el terreno según el relieve, el color del suelo y la cobertura para que la muestra sea representativa. En cada lote homogéneo se recorre en zigzag y se toman de 15 a 20 submuestras de 0 a 20 cm (o la profundidad que indique el laboratorio), descartando los bordes para evitar contaminación. La calicata sirve para observar el perfil, pero no se usa en el muestreo de rutina para fertilidad. Referencia en el DI: 2.2 Análisis de suelos: procedimiento para el muestreo."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 6 del banco · clave D -->
+        <div class="ova-evalquiz__slide" data-slide="sm-6" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 2. Manejo del cultivo y uso responsable de insumos</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Un análisis de suelos reporta pH de 5,2; materia orgánica de 2,9 % (referencia: 3,0 a 5,0) y nitrógeno orgánico de 0,1 % (referencia: 0,25 a 0,50). El productor quiere comprar de inmediato un fertilizante nitrogenado de alta concentración.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión es la más acertada?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Aplicar el fertilizante nitrogenado en dosis doble, para compensar rápidamente la deficiencia de nitrógeno.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Aplicar el fertilizante y repetir el análisis en cinco años, porque el pH no influye en la disponibilidad de los nutrientes.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Descartar el lote para la producción agrícola, porque un pH de 5,2 lo hace inapto para cualquier cultivo.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>D.</strong> Priorizar el encalado y la incorporación de enmiendas orgánicas, antes de definir el tipo y la dosis de fertilizante.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="Un pH entre 5,1 y 5,5 corresponde a un suelo fuertemente ácido: es restrictivo y requiere enmiendas como la cal agrícola, pero no es inapto. La acidez altera la solubilidad de los elementos y bloquea nutrientes críticos, de modo que fertilizar sin corregirla es ineficiente. El diseño instruccional analiza este mismo caso y concluye que se debe priorizar el encalado y las enmiendas orgánicas antes de determinar el fertilizante. El muestreo se recomienda al menos una vez al año. Referencia en el DI: 2.2 Tabla 2 / 2.3 Tabla 3." data-wrong="Un pH entre 5,1 y 5,5 corresponde a un suelo fuertemente ácido: es restrictivo y requiere enmiendas como la cal agrícola, pero no es inapto. La acidez altera la solubilidad de los elementos y bloquea nutrientes críticos, de modo que fertilizar sin corregirla es ineficiente. El diseño instruccional analiza este mismo caso y concluye que se debe priorizar el encalado y las enmiendas orgánicas antes de determinar el fertilizante. El muestreo se recomienda al menos una vez al año. Referencia en el DI: 2.2 Tabla 2 / 2.3 Tabla 3."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 7 del banco · clave A -->
+        <div class="ova-evalquiz__slide" data-slide="sm-7" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 2. Manejo del cultivo y uso responsable de insumos</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> El análisis de suelos de un lote reporta un pH de 8,2. Un vecino le recomienda al productor aplicar cal agrícola, “como siempre se hace para mejorar el suelo”.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión debe tomar el productor?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="true"><strong>A.</strong> No encalar, porque el suelo es moderadamente alcalino y requiere adición de materia orgánica o manejos especiales.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Encalar en dosis alta, porque un pH de 8,2 corresponde a un suelo extremadamente ácido.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Encalar en dosis baja, porque el suelo es ligeramente ácido y solo necesita ajustes mínimos.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> No intervenir, porque un pH de 8,2 corresponde a un suelo neutro con excelente disponibilidad de nutrientes.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="Según la Tabla 3, un pH entre 7,9 y 8,4 corresponde a un suelo moderadamente alcalino, limitado para los cultivos, que requiere adición de materia orgánica o manejos especiales. El encalado corrige la acidez; aplicarlo en un suelo alcalino no responde a la necesidad diagnosticada. El rango neutro va de 6,6 a 7,3. Referencia en el DI: 2.3 Variables agroclimáticas y acidez del suelo (Tabla 3)." data-wrong="Según la Tabla 3, un pH entre 7,9 y 8,4 corresponde a un suelo moderadamente alcalino, limitado para los cultivos, que requiere adición de materia orgánica o manejos especiales. El encalado corrige la acidez; aplicarlo en un suelo alcalino no responde a la necesidad diagnosticada. El rango neutro va de 6,6 a 7,3. Referencia en el DI: 2.3 Variables agroclimáticas y acidez del suelo (Tabla 3)."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 8 del banco · clave C -->
+        <div class="ova-evalquiz__slide" data-slide="sm-8" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 2. Manejo del cultivo y uso responsable de insumos</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Un productor de fríjol necesita un establecimiento uniforme del cultivo y quiere evitar resiembras. Le ofrecen tres opciones: (1) semilla guardada de la cosecha anterior de un vecino, a bajo costo; (2) semilla con etiqueta amarilla; (3) semilla con etiqueta azul que indica productor registrado ante el ICA, número de lote y porcentaje de germinación.</p>
+              <h3 class="ova-quiz__question">¿Qué opción debe elegir?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> La semilla del vecino, porque su menor costo compensa cualquier diferencia en el porcentaje de germinación.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> La semilla de etiqueta amarilla, porque este color corresponde a la categoría de semilla certificada.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>C.</strong> La semilla de etiqueta azul, porque corresponde a semilla certificada y su rótulo respalda la germinación, el lote y la trazabilidad.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Una mezcla de las tres semillas, para equilibrar el costo con el potencial genético del cultivo.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="Según la Tabla 1, la etiqueta azul corresponde a semilla certificada (C1 y C2) y la amarilla a semilla seleccionada. La semilla certificada cumple el porcentaje mínimo de germinación del ICA, asegura un establecimiento uniforme y minimiza las resiembras. El fríjol está entre las especies con semilla certificada en Colombia. La semilla “de costal” carece de certeza en la germinación y de pureza genética, y mezclar materiales altera la homogeneidad del cultivo. Referencia en el DI: 2.1 Elección de semillas (Tabla 1)." data-wrong="Según la Tabla 1, la etiqueta azul corresponde a semilla certificada (C1 y C2) y la amarilla a semilla seleccionada. La semilla certificada cumple el porcentaje mínimo de germinación del ICA, asegura un establecimiento uniforme y minimiza las resiembras. El fríjol está entre las especies con semilla certificada en Colombia. La semilla “de costal” carece de certeza en la germinación y de pureza genética, y mezclar materiales altera la homogeneidad del cultivo. Referencia en el DI: 2.1 Elección de semillas (Tabla 1)."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 9 del banco · clave A -->
+        <div class="ova-evalquiz__slide" data-slide="sm-9" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 2. Manejo del cultivo y uso responsable de insumos</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> El plan de fertilización definió la fuente y la dosis correctas, pero el operario aplicó el fertilizante al voleo en las calles, lejos de las plantas, en una etapa en que el cultivo tenía baja demanda de nutrientes. La respuesta del cultivo fue pobre.</p>
+              <h3 class="ova-quiz__question">¿Qué ajuste debe ordenar el responsable para el siguiente ciclo?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="true"><strong>A.</strong> Mantener la fuente y la dosis, y corregir el momento y el lugar: aplicar en las etapas fenológicas críticas y en la zona radicular activa.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Duplicar la dosis, para compensar las pérdidas por lavado y volatilización del ciclo anterior.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Cambiar la fuente del fertilizante, porque la baja respuesta indica que el producto no era el adecuado.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Suspender la fertilización y aplicar solo enmiendas, porque el cultivo no aprovechó los nutrientes.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="Los 4R son fuente, dosis, momento y lugar correctos. En el caso, la fuente y la dosis estaban bien definidas; las fallas estuvieron en el momento (etapa de baja demanda) y en el lugar (lejos de la zona radicular). Aplicar en la zona radicular activa minimiza la volatilización y el lavado. Aumentar la dosis contradice la dosificación precisa basada en el análisis de suelo. Referencia en el DI: 2.4 Elementos claves para el plan de fertilización (4R)." data-wrong="Los 4R son fuente, dosis, momento y lugar correctos. En el caso, la fuente y la dosis estaban bien definidas; las fallas estuvieron en el momento (etapa de baja demanda) y en el lugar (lejos de la zona radicular). Aplicar en la zona radicular activa minimiza la volatilización y el lavado. Aumentar la dosis contradice la dosificación precisa basada en el análisis de suelo. Referencia en el DI: 2.4 Elementos claves para el plan de fertilización (4R)."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 10 del banco · clave D -->
+        <div class="ova-evalquiz__slide" data-slide="sm-10" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 2. Manejo del cultivo y uso responsable de insumos</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Para controlar una misma plaga, el agrónomo dispone de dos productos registrados con eficacia similar: uno con banda roja y palabra de advertencia “Peligro” (categoría 1) y otro con banda azul y palabra “Atención” (categoría 4). El lote está cerca de viviendas.</p>
+              <h3 class="ova-quiz__question">¿Qué producto debe seleccionar y por qué?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> El de banda roja, porque una mayor toxicidad asegura un control más rápido de la plaga.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Cualquiera de los dos, porque con el EPP completo el nivel de riesgo es el mismo.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> El de banda roja mezclado con el de banda azul, para reducir la peligrosidad de la mezcla.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>D.</strong> El de banda azul, porque sustituir por un producto de menor categoría toxicológica es un control prioritario frente al EPP.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="La jerarquía de controles (Decreto 1072 de 2015) indica que primero se elimina o sustituye el peligro, por ejemplo con productos de menor categoría toxicológica, y que el EPP es el último nivel de control. Según la Tabla 5, la banda roja corresponde a las categorías 1 y 2 (“Peligro”) y la azul a la categoría 4 (“Atención”). El EPP no iguala el riesgo de dos productos con toxicidad diferente. Referencia en el DI: 2.5 Uso racional de agroquímicos (Tabla 5) / 4.2 Jerarquía de controles." data-wrong="La jerarquía de controles (Decreto 1072 de 2015) indica que primero se elimina o sustituye el peligro, por ejemplo con productos de menor categoría toxicológica, y que el EPP es el último nivel de control. Según la Tabla 5, la banda roja corresponde a las categorías 1 y 2 (“Peligro”) y la azul a la categoría 4 (“Atención”). El EPP no iguala el riesgo de dos productos con toxicidad diferente. Referencia en el DI: 2.5 Uso racional de agroquímicos (Tabla 5) / 4.2 Jerarquía de controles."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 11 del banco · clave C -->
+        <div class="ova-evalquiz__slide" data-slide="sm-11" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 2. Manejo del cultivo y uso responsable de insumos</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Hace 9 días se aplicó un fungicida cuya etiqueta indica un período de carencia de 14 días. Un comprador ofrece un buen precio si la cosecha se hace mañana. Además, la cuadrilla quiere entrar hoy al lote a deshierbar; el período de reingreso de la etiqueta ya se cumplió.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión debe tomar el productor?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Cosechar mañana y lavar el producto, porque el lavado elimina los residuos del fungicida.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Cosechar mañana solo los frutos más grandes, porque acumulan menos residuos del producto.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>C.</strong> Permitir el deshierbe, porque el reingreso ya se cumplió, y esperar a completar los 14 días de carencia para cosechar.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Prohibir el ingreso y la cosecha hasta el día 30, porque ambos períodos deben duplicarse por seguridad.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="El período de carencia es el número de días entre la última aplicación y la cosecha, y debe respetarse según la etiqueta: al día 10 no se ha cumplido. El período de reingreso es independiente y regula el regreso al lote tratado; como ya se cumplió, la labor de deshierbe puede hacerse. Duplicar los períodos no es un criterio del curso; la referencia es la etiqueta. Referencia en el DI: 2.5 Medidas de seguridad y EPP (período de carencia y reingreso)." data-wrong="El período de carencia es el número de días entre la última aplicación y la cosecha, y debe respetarse según la etiqueta: al día 10 no se ha cumplido. El período de reingreso es independiente y regula el regreso al lote tratado; como ya se cumplió, la labor de deshierbe puede hacerse. Duplicar los períodos no es un criterio del curso; la referencia es la etiqueta. Referencia en el DI: 2.5 Medidas de seguridad y EPP (período de carencia y reingreso)."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 12 del banco · clave B -->
+        <div class="ova-evalquiz__slide" data-slide="sm-12" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 2. Manejo del cultivo y uso responsable de insumos</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Al terminar de preparar la mezcla, el aplicador tiene tres envases vacíos de plaguicida. Un vecino le pide uno para almacenar agua para sus animales.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión debe tomar el aplicador?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Entregar el envase al vecino después de lavarlo una vez con jabón, porque así queda libre de residuos.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>B.</strong> Hacer el triple lavado vertiendo el enjuague en el tanque de la bomba, perforar los envases sin dañar la etiqueta y guardarlos hasta entregarlos al programa posconsumo.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Hacer el triple lavado vertiendo el enjuague en la quebrada más cercana, y quemar los envases en el lote.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Enterrar los envases sin lavar en un sitio alejado de la vivienda, para evitar el contacto de las personas.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="Los envases vacíos de plaguicidas son residuos peligrosos. El procedimiento es: llenar hasta una cuarta parte con agua limpia, tapar, agitar 30 segundos y verter el enjuague en el tanque de la bomba, tres veces; luego perforar sin dañar la etiqueta y guardar en un lugar seguro y señalizado, apartado de alimentos y fuentes de agua, hasta entregarlo al programa posconsumo (Resolución 1675 de 2013). Ningún envase debe reutilizarse. Referencia en el DI: 2.5 Triple lavado y disposición de envases / 4.4." data-wrong="Los envases vacíos de plaguicidas son residuos peligrosos. El procedimiento es: llenar hasta una cuarta parte con agua limpia, tapar, agitar 30 segundos y verter el enjuague en el tanque de la bomba, tres veces; luego perforar sin dañar la etiqueta y guardar en un lugar seguro y señalizado, apartado de alimentos y fuentes de agua, hasta entregarlo al programa posconsumo (Resolución 1675 de 2013). Ningún envase debe reutilizarse. Referencia en el DI: 2.5 Triple lavado y disposición de envases / 4.4."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 13 del banco · clave D -->
+        <div class="ova-evalquiz__slide" data-slide="sm-13" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 3. Cosecha, poscosecha y trazabilidad</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> El precio del producto subió y el productor quiere cosechar todo el lote esta semana, aunque una parte presenta tamaños y colores dispares.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión protege mejor la rentabilidad y la calidad?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Cosechar todo el lote, porque el precio favorable compensa cualquier rechazo en el mercado.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Cosechar todo el lote y clasificarlo después en el centro de acopio, porque la madurez se completa en la poscosecha.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Aplazar toda la cosecha un mes, para asegurar que el lote completo alcance la madurez.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>D.</strong> Evaluar el índice de madurez por tamaño, color y firmeza, recolectar lo que cumple y programar la recolección del resto.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="El momento de la cosecha depende del estado de madurez, que se determina con evaluaciones como la relación entre tamaño, color y firmeza, y de la uniformidad de la madurez por lotes. La situación de partida del tema 3 muestra que adelantar la cosecha por precio genera rechazos por falta de uniformidad en tamaño, color y sabor. Aplazar todo el lote ignora la parte que ya está en su punto. Referencia en el DI: 3.1 Buenas prácticas en la recolección." data-wrong="El momento de la cosecha depende del estado de madurez, que se determina con evaluaciones como la relación entre tamaño, color y firmeza, y de la uniformidad de la madurez por lotes. La situación de partida del tema 3 muestra que adelantar la cosecha por precio genera rechazos por falta de uniformidad en tamaño, color y sabor. Aplazar todo el lote ignora la parte que ya está en su punto. Referencia en el DI: 3.1 Buenas prácticas en la recolección."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 14 del banco · clave A -->
+        <div class="ova-evalquiz__slide" data-slide="sm-14" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 3. Cosecha, poscosecha y trazabilidad</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Hay un pedido urgente y el único camión disponible se usó la semana anterior para trasladar bultos de plaguicidas.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión debe tomar el productor?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="true"><strong>A.</strong> No usar ese vehículo y gestionar uno que no haya trasladado animales, agroquímicos u otras sustancias de riesgo.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Usar el vehículo, cubriendo la plataforma con plástico para evitar el contacto directo con la carga.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Usar el vehículo, porque ya pasó una semana y los residuos se degradaron.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Usar el vehículo, siempre que el producto vaya en cajas de cartón que absorban los posibles residuos.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="El diseño instruccional indica que es indispensable verificar que los vehículos no hayan sido usados previamente para trasladar animales, agroquímicos o cualquier otra sustancia que represente riesgo de contaminación cruzada. Ninguna de las medidas paliativas propuestas aparece como alternativa válida en el curso, y la urgencia comercial no cambia el requisito de inocuidad. Referencia en el DI: 3.2 Transporte y almacenamiento." data-wrong="El diseño instruccional indica que es indispensable verificar que los vehículos no hayan sido usados previamente para trasladar animales, agroquímicos o cualquier otra sustancia que represente riesgo de contaminación cruzada. Ninguna de las medidas paliativas propuestas aparece como alternativa válida en el curso, y la urgencia comercial no cambia el requisito de inocuidad. Referencia en el DI: 3.2 Transporte y almacenamiento."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 15 del banco · clave B -->
+        <div class="ova-evalquiz__slide" data-slide="sm-15" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 3. Cosecha, poscosecha y trazabilidad</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Una asociación enviará tomate en temporada de lluvias, por una ruta de varios días hacia otra región. Necesita un empaque que proteja contra daños físicos, resista la humedad y pueda reutilizarse después de limpiarlo.</p>
+              <h3 class="ova-quiz__question">¿Qué empaque debe seleccionar?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Cestas de bambú o mimbre, porque son livianas, biodegradables y de bajo costo.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>B.</strong> Cajas plásticas, protegiéndolas de la exposición solar continua, porque son resistentes, reutilizables y de fácil limpieza.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Cajas de cartón, porque son económicas y ofrecen buena amortiguación.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Sacos de yute, porque son transpirables y resistentes a los daños físicos.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="Según la Tabla 6, las cajas plásticas ofrecen mayor resistencia, son reutilizables y de fácil limpieza, aunque tienden a cristalizarse con la exposición solar continua. Las cestas tienen baja protección contra la humedad y se usan en rutas cortas; el cartón es sensible a la humedad, y los sacos de yute son sensibles a los daños físicos. Referencia en el DI: 3.2 Empaque y embalaje (Tabla 6)." data-wrong="Según la Tabla 6, las cajas plásticas ofrecen mayor resistencia, son reutilizables y de fácil limpieza, aunque tienden a cristalizarse con la exposición solar continua. Las cestas tienen baja protección contra la humedad y se usan en rutas cortas; el cartón es sensible a la humedad, y los sacos de yute son sensibles a los daños físicos. Referencia en el DI: 3.2 Empaque y embalaje (Tabla 6)."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 16 del banco · clave C -->
+        <div class="ova-evalquiz__slide" data-slide="sm-16" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 3. Cosecha, poscosecha y trazabilidad</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Un supermercado reporta residuos de plaguicida en un lote de producto. El productor necesita establecer qué producto se aplicó, en qué dosis, cuándo y a qué proveedor se le compró.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión le permite obtener esa información?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Consultar el registro de clientes, porque la trazabilidad hacia adelante identifica el origen de los insumos.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Revisar únicamente los registros de mano de obra, porque allí consta qué producto aplicó cada trabajador.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>C.</strong> Activar la trazabilidad hacia atrás y la interna: revisar el registro de aplicación e inventario de plaguicidas y el registro de proveedores.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Solicitar al supermercado sus registros de almacenamiento, porque la responsabilidad recae en el último eslabón.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="La trazabilidad hacia atrás identifica los insumos y a sus proveedores; la interna sigue el producto dentro de la propia unidad productiva. El curso exige documentar, entre otros, el registro de proveedores de fertilizantes y plaguicidas y el registro de aplicación e inventario de estos insumos. La trazabilidad hacia adelante identifica a los clientes, no el origen de los insumos. Referencia en el DI: 3.3 Implementación de la trazabilidad (NTC 5522)." data-wrong="La trazabilidad hacia atrás identifica los insumos y a sus proveedores; la interna sigue el producto dentro de la propia unidad productiva. El curso exige documentar, entre otros, el registro de proveedores de fertilizantes y plaguicidas y el registro de aplicación e inventario de estos insumos. La trazabilidad hacia adelante identifica a los clientes, no el origen de los insumos. Referencia en el DI: 3.3 Implementación de la trazabilidad (NTC 5522)."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 17 del banco · clave A -->
+        <div class="ova-evalquiz__slide" data-slide="sm-17" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 4. Seguridad, salud y sostenibilidad en el sistema agrícola</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Es mediodía, el viento sopla a 15 km/h y el lote que se va a tratar limita con una quebrada. El aplicador tiene el EPP completo y la mezcla ya preparada.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión debe tomar el aplicador?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="true"><strong>A.</strong> Reprogramar la aplicación para una hora fresca sin viento fuerte y dejar una franja de seguridad sin aplicar junto a la quebrada.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Aplicar de inmediato, porque con el EPP completo el viento no representa un riesgo.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Aplicar avanzando hacia la quebrada, para que la nube de aspersión se aleje del aplicador.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Aplicar primero el borde de la quebrada, mientras el viento disminuye en el resto del lote.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="El curso indica no aplicar con viento fuerte (más de 10 km/h) ni en horas de calor, y dejar una franja de seguridad sin aplicar junto a ríos, quebradas y nacimientos, según la norma y la etiqueta (Decreto 1843 de 1991). El EPP protege al aplicador, pero no evita la deriva hacia la fuente de agua ni hacia cultivos vecinos. Referencia en el DI: 4.5 Medidas de seguridad en la aplicación." data-wrong="El curso indica no aplicar con viento fuerte (más de 10 km/h) ni en horas de calor, y dejar una franja de seguridad sin aplicar junto a ríos, quebradas y nacimientos, según la norma y la etiqueta (Decreto 1843 de 1991). El EPP protege al aplicador, pero no evita la deriva hacia la fuente de agua ni hacia cultivos vecinos. Referencia en el DI: 4.5 Medidas de seguridad en la aplicación."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 18 del banco · clave D -->
+        <div class="ova-evalquiz__slide" data-slide="sm-18" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 4. Seguridad, salud y sostenibilidad en el sistema agrícola</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Un nuevo aplicador se presenta con guantes de tela, mascarilla de tela, gafas de seguridad y botas impermeables para aplicar un insecticida cuya etiqueta exige protección respiratoria.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión debe tomar el supervisor?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Autorizar la aplicación, porque la mascarilla de tela filtra las gotas de la aspersión.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Autorizar la aplicación, siempre que el trabajador se lave las manos cada hora.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Reemplazar solo las gafas por unas de mayor tamaño, porque los ojos son la zona más vulnerable.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>D.</strong> Reemplazar los guantes y la mascarilla por guantes de caña larga de nitrilo o neopreno y un respirador con filtros según la etiqueta y la HDS.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="El EPP se selecciona según la etiqueta y la hoja de datos de seguridad (HDS). El curso aclara que una mascarilla de tela no protege, y que se requiere respirador con filtros para vapores orgánicos y prefiltro para partículas. Las manos son la zona más vulnerable, por lo que se exigen guantes de caña larga de nitrilo o neopreno, materiales impermeables. Referencia en el DI: 4.3 Uso de elementos de protección personal (EPP)." data-wrong="El EPP se selecciona según la etiqueta y la hoja de datos de seguridad (HDS). El curso aclara que una mascarilla de tela no protege, y que se requiere respirador con filtros para vapores orgánicos y prefiltro para partículas. Las manos son la zona más vulnerable, por lo que se exigen guantes de caña larga de nitrilo o neopreno, materiales impermeables. Referencia en el DI: 4.3 Uso de elementos de protección personal (EPP)."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 19 del banco · clave C -->
+        <div class="ova-evalquiz__slide" data-slide="sm-19" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 4. Seguridad, salud y sostenibilidad en el sistema agrícola</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Al terminar una jornada de aplicación de plaguicidas, el aplicador debe retirarse el EPP. El supervisor revisa que siga el orden correcto.</p>
+              <h3 class="ova-quiz__question">¿Qué secuencia debe aprobar el supervisor?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Quitar primero los guantes, luego el overol, las botas, las gafas y el respirador, y lavar el EPP junto con la ropa de diario.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Quitar primero el respirador, luego las gafas, el overol y los guantes, y bañarse al día siguiente.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>C.</strong> Lavar los guantes puestos, quitar el overol, las botas, las gafas y el respirador, retirar por último los guantes, lavarse las manos y bañarse.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Quitar el overol con los guantes puestos sin lavarlos, retirar luego los guantes y guardar todo el EPP junto para reutilizarlo.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="El orden establecido es: lavar los guantes puestos; quitar el overol, las botas, las gafas y el respirador; retirar por último los guantes; lavarse las manos y bañarse. El EPP reutilizable se lava por separado de la ropa de uso diario, y lo deteriorado (guantes rotos, filtros saturados) se reemplaza de inmediato. Referencia en el DI: 4.3 Uso de EPP: retiro del EPP." data-wrong="El orden establecido es: lavar los guantes puestos; quitar el overol, las botas, las gafas y el respirador; retirar por último los guantes; lavarse las manos y bañarse. El EPP reutilizable se lava por separado de la ropa de uso diario, y lo deteriorado (guantes rotos, filtros saturados) se reemplaza de inmediato. Referencia en el DI: 4.3 Uso de EPP: retiro del EPP."></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pregunta 20 del banco · clave B -->
+        <div class="ova-evalquiz__slide" data-slide="sm-20" data-section="Selección múltiple" data-section-color="acento">
+          <div class="ova-eval__cuerpo">
+            <span class="ova-eval__tema">Tema 4. Seguridad, salud y sostenibilidad en el sistema agrícola</span>
+            <div class="ova-quiz">
+              <p class="ova-eval__contexto"><strong>Caso:</strong> Tras aplicar un plaguicida organofosforado, un trabajador presenta mareo y náuseas. Su ropa está mojada con la mezcla.</p>
+              <h3 class="ova-quiz__question">¿Qué decisión debe tomar el encargado de la finca?</h3>
+              <div class="ova-quiz__opts">
+                <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Dejar descansar al trabajador a la sombra con la ropa puesta, hasta que desaparezcan los síntomas.</button>
+                <button class="ova-quiz__opt" data-correct="true"><strong>B.</strong> Retirarlo de la zona, quitarle la ropa contaminada, lavar su piel con abundante agua, llamar al 123 o a CISPROQUIM, llevar la etiqueta al centro de salud y notificar al SIVIGILA.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Trasladarlo al centro de salud con la ropa puesta y sin la etiqueta del producto, para no perder tiempo.</button>
+                <button class="ova-quiz__opt" data-correct="false"><strong>D.</strong> Esperar a que termine la jornada y programar el examen de colinesterasa en la siguiente vigilancia médica.</button>
+              </div>
+              <div class="ova-quiz__feedback" data-correct="El curso define el protocolo ante una intoxicación: retirar a la persona de la zona, quitarle la ropa contaminada, lavar la piel con abundante agua, llamar al 123 o a CISPROQUIM, llevar la etiqueta del producto al centro de salud y notificar el caso al SIVIGILA. El examen de colinesterasa es una medida de vigilancia médica periódica para expuestos a organofosforados y carbamatos, no una respuesta ante una intoxicación aguda. Referencia en el DI: 4.5 Medidas de seguridad: actuación ante una intoxicación." data-wrong="El curso define el protocolo ante una intoxicación: retirar a la persona de la zona, quitarle la ropa contaminada, lavar la piel con abundante agua, llamar al 123 o a CISPROQUIM, llevar la etiqueta del producto al centro de salud y notificar el caso al SIVIGILA. El examen de colinesterasa es una medida de vigilancia médica periódica para expuestos a organofosforados y carbamatos, no una respuesta ante una intoxicación aguda. Referencia en el DI: 4.5 Medidas de seguridad: actuación ante una intoxicación."></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="cierre">
+          <div class="ova-eval__cuerpo">
+            <h2>Evaluación completada</h2>
+            <p style="max-width:60ch;">Repasar las retroalimentaciones vale tanto como acertar.</p>
+            <button class="ova-evalquiz__btn" data-evalquiz-restart style="margin-top:22px;"><iconify-icon icon="mdi:refresh"></iconify-icon> Volver a intentarlo</button>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__nav" data-evalquiz-nav>
+          <button class="ova-evalquiz__btn ova-evalquiz__btn--prev" data-evalquiz-prev aria-label="Pregunta anterior" title="Anterior"><iconify-icon icon="mdi:arrow-left"></iconify-icon></button>
+          <div class="ova-evalquiz__progress-bar"><div class="ova-evalquiz__progress-fill" data-evalquiz-progress></div></div>
+          <span class="ova-evalquiz__counter" data-evalquiz-counter></span>
+          <button class="ova-evalquiz__btn ova-evalquiz__btn--primary" data-evalquiz-next>Siguiente <iconify-icon icon="mdi:arrow-right"></iconify-icon></button>
+        </div>
+      </div>
